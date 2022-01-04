@@ -1,13 +1,15 @@
-<script setup lang="ts">
+<script setup>
+
 </script>
 
 <template>
   <div>
-    <h1> This is the index page</h1>
+    <h1>Admin Page</h1>
+    <People />
   </div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: default
+  layout: admin
 </route>

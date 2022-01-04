@@ -4,15 +4,17 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
-    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
-    CarbonLanguage: typeof import('~icons/carbon/language')['default']
-    CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
-    CarbonMoon: typeof import('~icons/carbon/moon')['default']
-    CarbonSun: typeof import('~icons/carbon/sun')['default']
+    AdminSideList: typeof import('./components/AdminSideList.vue')['default']
+    AdminSideNav: typeof import('./components/AdminSideNav.vue')['default']
+    AdminTopNav: typeof import('./components/AdminTopNav.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    FormOwner: typeof import('./components/FormOwner.vue')['default']
+    People: typeof import('./components/People.vue')['default']
+    PeopleSideList: typeof import('./components/PeopleSideList.vue')['default']
+    PropertySideList: typeof import('./components/PropertySideList.vue')['default']
     README: typeof import('./components/README.md')['default']
+    SiteDialog: typeof import('./components/SiteDialog.vue')['default']
   }
 }
 

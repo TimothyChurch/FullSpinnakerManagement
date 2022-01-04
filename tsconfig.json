@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
     "module": "ESNext",
     "target": "es2016",
@@ -17,7 +18,11 @@
       "cypress",
       "vite/client",
       "vite-plugin-pages/client",
-      "vite-plugin-vue-layouts/client"
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-vue-gql/client",
+      "@urql/vue/dist",
+      "@urql/core/dist",
+      "~/generated/graphql.ts"
     ],
     "paths": {
       "~/*": ["src/*"]

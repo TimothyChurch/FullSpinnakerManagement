@@ -5,6 +5,7 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
@@ -14,6 +15,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import Vql from 'vite-plugin-vue-gql'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -27,6 +29,8 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
+
+    Vql(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
@@ -59,11 +63,9 @@ export default defineConfig({
 
       // custom resolvers
       resolvers: [
-        // auto import icons
-        // https://github.com/antfu/unplugin-icons
+        HeadlessUiResolver({}),
         IconsResolver({
           componentPrefix: '',
-          // enabledCollections: ['carbon']
         }),
       ],
 
@@ -165,14 +167,5 @@ export default defineConfig({
     exclude: [
       'vue-demi',
     ],
-  },
-
-  // https://github.com/vitest-dev/vitest
-  test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    deps: {
-      inline: ['@vue', '@vueuse', 'vue-demi'],
-    },
   },
 })
