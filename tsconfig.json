@@ -20,9 +20,8 @@
       "vite-plugin-pages/client",
       "vite-plugin-vue-layouts/client",
       "vite-plugin-vue-gql/client",
-      "@urql/vue/dist",
-      "@urql/core/dist",
-      "~/generated/graphql.ts"
+      "@urql/vue",
+      "@urql/core",
     ],
     "paths": {
       "~/*": ["src/*"]

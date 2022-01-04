@@ -1,29 +1,14 @@
-<script>
+<script setup>
 import { ref } from 'vue'
-import { Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { ExclamationIcon, XIcon } from '@heroicons/vue/outline'
+import { setComponent, showDialog, toggleDialog } from '~/composables/dialog'
+import FormOwner from '~/components/FormOwner.vue'
 
-export default {
-  components: {
-    Dialog,
-    DialogOverlay,
-    TransitionChild,
-    TransitionRoot,
-    XIcon,
-  },
-  setup() {
-    const open = ref(false)
-
-    return {
-      open,
-    }
-  },
-}
 </script>
 
 <template>
-  <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="fixed z-10 inset-0 overflow-y-auto" @close="open = false">
+  <TransitionRoot as="template" :show="showDialog">
+    <Dialog as="div" class="fixed z-10 inset-0 overflow-y-auto" @close="toggleDialog()">
       <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <TransitionChild
           as="template"
@@ -50,14 +35,13 @@ export default {
         >
           <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
             <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
-              <button type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" @click="open = false">
+              <button type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" @click="toggleDialog()">
                 <span class="sr-only">Close</span>
                 <XIcon class="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div class="sm:flex sm:items-start">
-              <h1>Dialog components here</h1>
-              <FormOwner />
+              <component :is="FormOwner" />
             </div>
           </div>
         </TransitionChild>

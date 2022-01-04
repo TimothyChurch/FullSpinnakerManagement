@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { ref } from 'vue'
 import {
   Dialog,
@@ -22,6 +22,7 @@ import {
   UserCircleIcon,
   XIcon,
 } from '@heroicons/vue/outline'
+import { setComponent, toggleDialog } from '~/composables/dialog'
 
 const user = {
   name: 'Whitney Francis',
@@ -55,35 +56,13 @@ const sidebarNavigation = [
   { name: 'Drafts', href: '#', icon: PencilAltIcon, current: false },
 ]
 
-export default {
-  components: {
-    Dialog,
-    DialogOverlay,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-    TransitionChild,
-    TransitionRoot,
-    BellIcon,
-    ChevronDownIcon,
-    MenuIcon,
-    SearchIcon,
-    XIcon,
-    PencilAltIcon,
-  },
-  setup() {
-    const mobileMenuOpen = ref(false)
+const mobileMenuOpen = ref(false)
 
-    return {
-      user,
-      navigation,
-      sidebarNavigation,
-      userNavigation,
-      mobileMenuOpen,
-    }
-  },
+const setDialog = (selectedDialog) => {
+  setComponent.value = selectedDialog
+  toggleDialog()
 }
+
 </script>
 
 <template>
@@ -147,12 +126,12 @@ export default {
             <MenuItems class="origin-top-right absolute z-30 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div class="py-1">
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog('FormOwner')">
                     Owner
                   </a>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog('FormProperty')">
                     Property
                   </a>
                 </MenuItem>
@@ -185,12 +164,12 @@ export default {
               <MenuItems class="origin-top-right absolute z-30 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
                   <MenuItem v-slot="{ active }">
-                    <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+                    <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
                       Your Profile
                     </a>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
-                    <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+                    <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
                       Sign Out
                     </a>
                   </MenuItem>

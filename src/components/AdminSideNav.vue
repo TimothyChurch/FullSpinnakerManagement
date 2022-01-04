@@ -1,34 +1,14 @@
 <script setup>
 import {
-  Dialog,
-  DialogOverlay,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  TransitionChild,
-  TransitionRoot,
-} from '@headlessui/vue'
-import { ChevronDownIcon, SearchIcon } from '@heroicons/vue/solid'
-import {
-  ArchiveIcon,
-  BanIcon,
-  BellIcon,
-  FlagIcon,
-  InboxIcon,
-  MenuIcon,
-  PencilAltIcon,
-  UserCircleIcon,
-  XIcon,
+  HomeIcon,
+  TemplateIcon,
+  UserIcon,
 } from '@heroicons/vue/outline'
 
 const sidebarNavigation = [
-  { name: 'Open', to: '/people', icon: InboxIcon, current: true },
-  { name: 'Archive', to: '/property', icon: ArchiveIcon, current: false },
-  { name: 'Customers', to: '#', icon: UserCircleIcon, current: false },
-  { name: 'Flagged', to: '#', icon: FlagIcon, current: false },
-  { name: 'Spam', to: '#', icon: BanIcon, current: false },
-  { name: 'Drafts', to: '#', icon: PencilAltIcon, current: false },
+  { name: 'Dashboard', to: '/', icon: TemplateIcon, current: false }, // TODO Set determine current based on route
+  { name: 'People', to: '/people', icon: UserIcon, current: false },
+  { name: 'Property', to: '/property', icon: HomeIcon, current: false },
 ]
 
 </script>

@@ -1,0 +1,18 @@
+query Properties {
+  properties {
+    name
+    status
+  }
+}
+
+query People {
+  owners {
+    firstName
+  }
+  cleaners {
+    company
+  }
+  vendors {
+    name
+  }
+}

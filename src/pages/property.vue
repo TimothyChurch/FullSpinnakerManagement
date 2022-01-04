@@ -1,16 +1,7 @@
 <script setup>
-import { gql, useQuery } from '@urql/vue'
+import { usePropertiesQuery } from '~/generated/graphql'
 
-const Properties = gql`
-query Properties {
-  properties {
-    name
-    status
-  }
-}
-`
-
-const { data, fetching, error } = useQuery({ query: Properties })
+const { data, fetching, error } = usePropertiesQuery()
 </script>
 
 <template>
