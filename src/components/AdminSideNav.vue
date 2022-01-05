@@ -6,7 +6,7 @@ import {
 } from '@heroicons/vue/outline'
 
 const sidebarNavigation = [
-  { name: 'Dashboard', to: '/', icon: TemplateIcon, current: false }, // TODO Set determine current based on route
+  { name: 'Dashboard', to: '/dashboard', icon: TemplateIcon, current: false }, // TODO Set determine current based on route
   { name: 'People', to: '/people', icon: UserIcon, current: false },
   { name: 'Property', to: '/property', icon: HomeIcon, current: false },
 ]

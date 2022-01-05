@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { ExclamationIcon, XIcon } from '@heroicons/vue/outline'
 import { setComponent, showDialog, toggleDialog } from '~/composables/dialog'
-import FormOwner from '~/components/FormOwner.vue'
 
 </script>
 
@@ -41,7 +40,8 @@ import FormOwner from '~/components/FormOwner.vue'
               </button>
             </div>
             <div class="sm:flex sm:items-start">
-              <component :is="FormOwner" />
+              {{ setComponent }}
+              <FormProperty />
             </div>
           </div>
         </TransitionChild>

@@ -45,6 +45,11 @@ export default {
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
           <!-- Profile dropdown -->
+          <router-link to="/dashboard">
+            <button>
+              Dashboard
+            </button>
+          </router-link>
           <router-link to="/login">
             <button>
               Log In

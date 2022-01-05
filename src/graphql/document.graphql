@@ -16,3 +16,45 @@ query People {
     name
   }
 }
+
+mutation addProperty (
+  $name: String,
+  $street: String,
+  $city: String,
+  $state: String,
+  $zip: String,
+  $bedrooms: String,
+  $bathrooms: String,
+  $guests: String,
+  $owner: ObjectId,
+  $cleaner: ObjectId,
+) {
+  insertOneProperty(data: {
+    name: $name,
+    address: {
+      street: $street,
+      city: $city,
+      state: $state,
+      zip: $zip,
+    },
+    details: {
+      bedrooms: $bedrooms,
+      bathrooms: $bathrooms,
+      guests: $guests,
+    },
+    owner: {link: [$owner]}
+  }) {
+    name
+    address {
+      street
+      city
+      state
+      zip
+    }
+    details {
+      bedrooms
+      bathrooms
+      guests
+    }
+  }
+}

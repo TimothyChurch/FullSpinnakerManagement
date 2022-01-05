@@ -1,33 +1,37 @@
 <script setup>
-import { gql, useMutation } from '@urql/vue'
+import { useAddPropertyMutation } from '~/graphql/graphql'
 
 const form = reactive({
   name: '',
-  lastName: '',
-  phone: '',
-  email: '',
-  address: '',
+  status: '',
+  address: {
+    street: '',
+    city: '',
+    state: '',
+    zip: '',
+  },
+  details: {
+    bedrooms: '',
+    bathrooms: '',
+    guests: '',
+  },
+  owner: [ObjectId],
+  cleaner: [ObjectId],
 })
 
-const insertOneOwner = gql`
-mutation ($firstName: String, $lastName: String, $phone: String, $email: String, $address: String) {
-  insertOneOwner(data: {
-    firstName: $firstName, 
-    lastName: $lastName, 
-    phone: $phone, 
-    email: $email, 
-    address: $address
-  }) {
-    firstName
-    lastName
-    phone
-    email
-    address
-  }
-}
-`
+const schema = [
+  { name: 'name', model: 'form.name', class: 'sm:col-span-6' },
+  { name: 'status', model: 'form.status', class: 'sm:col-span-6' },
+  { name: 'street', model: 'form.address.street', class: 'sm:col-span-6' },
+  { name: 'city', model: 'form.address.city', class: 'sm:col-span-6' },
+  { name: 'state', model: 'form.address.state', class: 'sm:col-span-6' },
+  { name: 'zip', model: 'form.address.zip', class: 'sm:col-span-6' },
+  { name: 'bedrooms', model: 'form.details.bedrooms', class: 'sm:col-span-6' },
+  { name: 'bathrooms', model: 'form.details.bathrooms', class: 'sm:col-span-6' },
+  { name: 'guests', model: 'form.details.guests', class: 'sm:col-span-6' },
+]
 
-const addOwner = useMutation(insertOneOwner)
+const addProeprty = useAddPropertyMutation()
 
 </script>
 
@@ -37,85 +41,20 @@ const addOwner = useMutation(insertOneOwner)
       <div class="pt-8">
         <div>
           <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Add Owner
+            Add Property
           </h3>
         </div>
         <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-          <div class="sm:col-span-3">
-            <label for="first-name" class="block text-sm font-medium text-gray-700">
-              First name
+          <div v-for="item in schema" :key="item.name" :class="item.class">
+            <label :for="item.name" class="block text-sm font-medium text-gray-700">
+              {{ item.name }}
             </label>
             <div class="mt-1">
               <input
-                id="first-name"
-                v-model="form.firstName"
+                :id="item.name"
+                v-model="item.model"
                 type="text"
-                name="first-name"
-                autocomplete="given-name"
-                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              >
-            </div>
-          </div>
-
-          <div class="sm:col-span-3">
-            <label for="last-name" class="block text-sm font-medium text-gray-700">
-              Last name
-            </label>
-            <div class="mt-1">
-              <input
-                id="last-name"
-                v-model="form.lastName"
-                type="text"
-                name="last-name"
-                autocomplete="family-name"
-                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              >
-            </div>
-          </div>
-
-          <div class="sm:col-span-3">
-            <label for="phone" class="block text-sm font-medium text-gray-700">
-              Phone Number
-            </label>
-            <div class="mt-1">
-              <input
-                id="phone"
-                v-model="form.phone"
-                type="text"
-                name="phone"
-                autocomplete="phone"
-                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              >
-            </div>
-          </div>
-
-          <div class="sm:col-span-6">
-            <label for="email" class="block text-sm font-medium text-gray-700">
-              Email address
-            </label>
-            <div class="mt-1">
-              <input
-                id="email"
-                v-model="form.email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-              >
-            </div>
-          </div>
-
-          <div class="sm:col-span-6">
-            <label for="address" class="block text-sm font-medium text-gray-700">
-              Address
-            </label>
-            <div class="mt-1">
-              <input
-                id="address"
-                v-model="form.address"
-                type="text"
-                name="address"
-                autocomplete="address"
+                :name="item.name"
                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
               >
             </div>

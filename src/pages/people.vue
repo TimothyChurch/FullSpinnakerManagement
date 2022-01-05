@@ -1,26 +1,13 @@
 <script setup>
-import { gql, useQuery } from '@urql/vue'
+import { usePeopleQuery } from '~/graphql/graphql'
 
-const People = gql`
-query People {
-  owners {
-    firstName
-  }
-  cleaners {
-    company
-  }
-  vendors {
-    name
-  }
-}
-`
-
-const { data, fetching, error } = useQuery({ query: People })
+const { data, fetching, error } = usePeopleQuery()
 
 const keys = computed(() => {
   if (data.value)
     return Object.keys(data.value)
 })
+
 </script>
 
 <template>

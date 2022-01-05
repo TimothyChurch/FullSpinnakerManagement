@@ -2,14 +2,12 @@ overwrite: true
 schema: "src/graphql/schema.graphql"
 documents: "src/graphql/document.graphql"
 generates:
-  src/generated/graphql.ts:
+  src/graphql/graphql.ts:
     plugins:
       - "typescript"
-      - "urql-introspection"
       - "typescript-operations"
-      - "typed-document-node"
       - "typescript-vue-urql"
-  ./graphql.schema.json:
+  src/graphql/graphql.schema.json:
     plugins:
       - "introspection"
       

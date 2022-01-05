@@ -1,5 +1,5 @@
 <script setup>
-import { usePropertiesQuery } from '~/generated/graphql'
+import { usePropertiesQuery } from '~/graphql/graphql'
 
 const { data, fetching, error } = usePropertiesQuery()
 </script>

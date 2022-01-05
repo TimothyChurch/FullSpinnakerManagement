@@ -7,21 +7,11 @@ declare module 'vue' {
     AdminSideList: typeof import('./components/AdminSideList.vue')['default']
     AdminSideNav: typeof import('./components/AdminSideNav.vue')['default']
     AdminTopNav: typeof import('./components/AdminTopNav.vue')['default']
-    Dialog: typeof import('@headlessui/vue')['Dialog']
-    DialogOverlay: typeof import('@headlessui/vue')['DialogOverlay']
     FormOwner: typeof import('./components/FormOwner.vue')['default']
     FormProperty: typeof import('./components/FormProperty.vue')['default']
-    Menu: typeof import('@headlessui/vue')['Menu']
-    MenuButton: typeof import('@headlessui/vue')['MenuButton']
-    MenuItem: typeof import('@headlessui/vue')['MenuItem']
-    MenuItems: typeof import('@headlessui/vue')['MenuItems']
-    People: typeof import('./components/People.vue')['default']
     PeopleSideList: typeof import('./components/PeopleSideList.vue')['default']
     PropertySideList: typeof import('./components/PropertySideList.vue')['default']
-    README: typeof import('./components/README.md')['default']
     SiteDialog: typeof import('./components/SiteDialog.vue')['default']
-    TransitionChild: typeof import('@headlessui/vue')['TransitionChild']
-    TransitionRoot: typeof import('@headlessui/vue')['TransitionRoot']
   }
 }
 

@@ -58,8 +58,8 @@ const sidebarNavigation = [
 
 const mobileMenuOpen = ref(false)
 
-const setDialog = (selectedDialog) => {
-  setComponent.value = selectedDialog
+const setDialog = (newDialog) => {
+  setComponent.value = newDialog
   toggleDialog()
 }
 
@@ -126,12 +126,12 @@ const setDialog = (selectedDialog) => {
             <MenuItems class="origin-top-right absolute z-30 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div class="py-1">
                 <MenuItem v-slot="{ active }">
-                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog('FormOwner')">
+                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog({ dialog: FormOwner })">
                     Owner
                   </a>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
-                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog('FormProperty')">
+                  <a :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']" @click="setDialog({ dialog: FormProperty })">
                     Property
                   </a>
                 </MenuItem>
