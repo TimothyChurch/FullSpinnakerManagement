@@ -22,6 +22,7 @@
       "vite-plugin-vue-gql/client",
       "@urql/vue",
       "@urql/core",
+      "realm-web",
     ],
     "paths": {
       "~/*": ["src/*"]

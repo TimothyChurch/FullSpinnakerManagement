@@ -40,7 +40,6 @@ import { setComponent, showDialog, toggleDialog } from '~/composables/dialog'
               </button>
             </div>
             <div class="sm:flex sm:items-start">
-              {{ setComponent }}
               <FormProperty />
             </div>
           </div>
