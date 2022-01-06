@@ -18,15 +18,15 @@ const form = reactive({
 })
 
 const schema = [
-  { name: 'name', model: form.name, class: 'sm:col-span-6' },
-  { name: 'status', model: form.status, class: 'sm:col-span-6' },
-  { name: 'street', model: form.address.street, class: 'sm:col-span-6' },
-  { name: 'city', model: form.address.city, class: 'sm:col-span-6' },
-  { name: 'state', model: form.address.state, class: 'sm:col-span-6' },
-  { name: 'zip', model: form.address.zip, class: 'sm:col-span-6' },
-  { name: 'bedrooms', model: form.details.bedrooms, class: 'sm:col-span-6' },
-  { name: 'bathrooms', model: form.details.bathrooms, class: 'sm:col-span-6' },
-  { name: 'guests', model: form.details.guests, class: 'sm:col-span-6' },
+  { name: 'name', model: form.name },
+  { name: 'status', model: form.status },
+  { name: 'street', model: form.address.street },
+  { name: 'city', model: form.address.city },
+  { name: 'state', model: form.address.state },
+  { name: 'zip', model: form.address.zip },
+  { name: 'bedrooms', model: form.details.bedrooms },
+  { name: 'bathrooms', model: form.details.bathrooms },
+  { name: 'guests', model: form.details.guests },
 ]
 
 const addProeprty = useAddPropertyMutation()
@@ -35,8 +35,8 @@ const addProeprty = useAddPropertyMutation()
 
 <template>
   <el-form ref="formRef" :model="form">
-    <el-form-item label="Name">
-      <el-input v-model="form.name" />
+    <el-form-item v-for="item in schema" :key="item.name" :label="item.name">
+      <el-input :v-model="item.model" />
     </el-form-item>
   </el-form>
 </template>
