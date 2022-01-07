@@ -14,7 +14,7 @@
         <!-- Primary column -->
         <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col overflow-y-auto lg:order-last">
           <router-view />
-          <SiteDialog />
+          <Forms />
         </section>
       </main>
     </div>

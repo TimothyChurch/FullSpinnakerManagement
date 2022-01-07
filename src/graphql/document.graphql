@@ -2,23 +2,41 @@ query Properties {
   properties {
     name
     status
+    owner {
+      firstName
+    }
   }
 }
 
 query People {
   owners {
+    _id
     firstName
+    properties {
+      name
+    }
   }
   cleaners {
+    _id
     company
   }
   vendors {
+    _id
     name
+  }
+}
+
+query Owners {
+  owners {
+    _id
+    firstName
+    lastName
   }
 }
 
 mutation addProperty (
   $name: String,
+  $status: String,
   $street: String,
   $city: String,
   $state: String,
@@ -31,6 +49,7 @@ mutation addProperty (
 ) {
   insertOneProperty(data: {
     name: $name,
+    status: $status,
     address: {
       street: $street,
       city: $city,
@@ -42,7 +61,12 @@ mutation addProperty (
       bathrooms: $bathrooms,
       guests: $guests,
     },
-    owner: {link: [$owner]}
+    owner: {
+      link: [$owner]
+    },
+    cleaner: {
+      link: [$cleaner]
+    }
   }) {
     name
     address {

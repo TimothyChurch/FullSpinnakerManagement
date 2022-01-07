@@ -7,14 +7,16 @@ declare module 'vue' {
     AdminSideList: typeof import('./components/AdminSideList.vue')['default']
     AdminSideNav: typeof import('./components/AdminSideNav.vue')['default']
     AdminTopNav: typeof import('./components/AdminTopNav.vue')['default']
-    Dialog: typeof import('@headlessui/vue')['Dialog']
-    DialogOverlay: typeof import('@headlessui/vue')['DialogOverlay']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElForm: typeof import('element-plus/es')['ElForm']
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
     FormOwner: typeof import('./components/FormOwner.vue')['default']
     FormProperty: typeof import('./components/FormProperty.vue')['default']
+    Forms: typeof import('./components/Forms.vue')['default']
     Menu: typeof import('@headlessui/vue')['Menu']
     MenuButton: typeof import('@headlessui/vue')['MenuButton']
     MenuItem: typeof import('@headlessui/vue')['MenuItem']
@@ -24,8 +26,6 @@ declare module 'vue' {
     SiteDialog: typeof import('./components/SiteDialog.vue')['default']
     SiteForm: typeof import('./components/SiteForm.vue')['default']
     SiteQuickAdd: typeof import('./components/SiteQuickAdd.vue')['default']
-    TransitionChild: typeof import('@headlessui/vue')['TransitionChild']
-    TransitionRoot: typeof import('@headlessui/vue')['TransitionRoot']
   }
 }
 

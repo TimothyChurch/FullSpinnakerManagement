@@ -9,7 +9,7 @@ const { data, fetching, error } = usePropertiesQuery()
     <!-- Primary column -->
     <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col overflow-y-auto lg:order-last">
       <router-view />
-      {{ error }}
+      {{ data }}
     </section>
     <!-- Secondary column (hidden on smaller screens) -->
     <aside class="hidden lg:block lg:flex-shrink-0 lg:order-first">

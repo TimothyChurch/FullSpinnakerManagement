@@ -1,16 +1,10 @@
 <script setup>
-import { setComponent, showDialog } from '~/composables/dialog'
-
-const comp = computed(() => {
-  return setComponent.value
-})
+import { showDialog } from '~/composables/dialog'
 
 </script>
 
 <template>
   <el-dialog v-model="showDialog">
-    {{ setComponent }}
-    {{ comp }}
-    <component :is="comp" />
+    <slot />
   </el-dialog>
 </template>
