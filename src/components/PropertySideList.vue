@@ -17,18 +17,20 @@ const props = defineProps({
       <h1>Error: {{ props.error }}</h1>
     </div>
     <div v-else>
-      <ul role="list" class="divide-y divide-gray-200">
-        <li v-for="property in props.data.properties" :key="property.name" class="py-4 flex">
-          <div class="ml-3">
-            <p class="text-sm font-medium text-gray-900">
-              {{ property.name }}
-            </p>
-            <p class="text-sm text-gray-500">
-              {{ property.status }}
-            </p>
-          </div>
-        </li>
-      </ul>
+      <el-scrollbar height="inherit">
+        <el-card v-for="property in props.data.properties" :key="property.name" class="py-4 flex">
+          <router-link :to="`/property/${property._id}`">
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                {{ property.name }}
+              </p>
+              <p class="text-sm text-gray-500">
+                {{ property.status }}
+              </p>
+            </div>
+          </router-link>
+        </el-card>
+      </el-scrollbar>
     </div>
   </div>
 </template>

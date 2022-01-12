@@ -1,6 +1,6 @@
 <script setup>
 import * as Realm from 'realm-web'
-import { useAddPropertyMutation, usePeopleQuery } from '~/graphql/graphql'
+import { useAddPropertyMutation, useOwnersQuery, usePeopleQuery } from '~/graphql/types'
 import { toggleDialog } from '~/composables/dialog'
 
 const form = reactive({
@@ -13,8 +13,8 @@ const form = reactive({
   bedrooms: '',
   bathrooms: '',
   guests: '',
-  owner: '',
-  cleaner: '',
+  owner: null,
+  cleaner: null,
 })
 
 const status = [
@@ -24,15 +24,25 @@ const status = [
   { label: 'Ended', value: 'ended' },
   { label: 'Lost', value: 'lost' },
 ]
+const data = { _id: form.owner }
+const { data: people } = usePeopleQuery()
 
-const { data: people, fetching: ownerFetching, error: ownerError } = usePeopleQuery()
 const addProperty = useAddPropertyMutation()
+const owner = useOwnersQuery(data)
+
+const temp = addProperty.data.value
+
 // TODO move execute function to script and add recursive addition to owner and cleaner
-const error = addProperty.error
-const fetching = addProperty.fetching
+const handleSubmit = () => {
+  addProperty
+    .executeMutation(form)
+}
+
 </script>
 
 <template>
+  {{ form.owner }}
+  {{ owner.data }}
   <el-form ref="formRef" :model="form" label-width="120px">
     {{ form.owners }}
     <el-form-item label="Name">
@@ -90,11 +100,14 @@ const fetching = addProperty.fetching
       </el-select>
     </el-form-item>
     <el-form-item>
-      <el-button @click="addProperty.executeMutation(form)">
+      <el-button @click="handleSubmit()">
         Save
       </el-button>
       <el-button @click="toggleDialog()">
         Cancel
+      </el-button>
+      <el-button @click="owner">
+        Push me
       </el-button>
     </el-form-item>
   </el-form>

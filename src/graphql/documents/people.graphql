@@ -1,0 +1,38 @@
+query People {
+  owners {
+    _id
+    firstName
+    properties {
+      name
+    }
+  }
+  cleaners {
+    _id
+    company
+  }
+  vendors {
+    _id
+    name
+  }
+}
+
+query Owners {
+  owners {
+    _id
+    firstName
+  }
+}
+
+query Vendors {
+  vendors {
+    _id
+    name
+  }
+}
+
+query Cleaners {
+  cleaners {
+    _id
+    company
+  }
+}

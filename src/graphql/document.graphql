@@ -1,9 +1,33 @@
 query Properties {
   properties {
+    _id
     name
     status
     owner {
       firstName
+    }
+  }
+}
+
+query Property( $_id: ObjectId ) {
+  property(
+    query: {
+      _id: $_id
+    }
+  ) {
+    _id
+    name
+    status
+    owner {
+      _id
+      firstName
+      lastName
+    }
+    address {
+      street
+      city
+      state
+      zip
     }
   }
 }
@@ -26,11 +50,25 @@ query People {
   }
 }
 
-query Owners {
-  owners {
+query Owners ($_id: ObjectId){
+  owners(query: { _id: $_id }) {
     _id
     firstName
     lastName
+  }
+}
+
+query Vendors {
+  vendors {
+    _id
+    name
+  }
+}
+
+query Cleaners {
+  cleaners {
+    _id
+    company
   }
 }
 
@@ -67,7 +105,9 @@ mutation addProperty (
     cleaner: {
       link: [$cleaner]
     }
-  }) {
+  }),
+  {
+    _id
     name
     address {
       street
@@ -80,5 +120,30 @@ mutation addProperty (
       bathrooms
       guests
     }
+  }
+}
+
+mutation LinkOwner (
+  $owner: ObjectId,
+  $property: ObjectId,
+) {
+  updateOneOwner(
+    query: {
+      _id: $owner
+    }, 
+    set: {
+      properties: {
+        link: [$property]
+      }
+    }
+  ) {
+    _id
+    address
+    email
+    firstName
+    lastName
+    phone
+    role
+    stage
   }
 }

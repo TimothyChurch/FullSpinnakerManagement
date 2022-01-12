@@ -1003,17 +1003,36 @@ export type VendorUpdateInput = {
 export type PropertiesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PropertiesQuery = { __typename?: 'Query', properties: Array<{ __typename?: 'Property', name?: string | null | undefined, status?: string | null | undefined, owner?: Array<{ __typename?: 'Owner', firstName?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> };
+export type PropertiesQuery = { __typename?: 'Query', properties: Array<{ __typename?: 'Property', _id?: any | null | undefined, name?: string | null | undefined, status?: string | null | undefined, owner?: Array<{ __typename?: 'Owner', firstName?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> };
+
+export type PropertyQueryVariables = Exact<{
+  _id?: InputMaybe<Scalars['ObjectId']>;
+}>;
+
+
+export type PropertyQuery = { __typename?: 'Query', property?: { __typename?: 'Property', _id?: any | null | undefined, name?: string | null | undefined, status?: string | null | undefined, owner?: Array<{ __typename?: 'Owner', _id?: any | null | undefined, firstName?: string | null | undefined, lastName?: string | null | undefined } | null | undefined> | null | undefined, address?: { __typename?: 'PropertyAddress', street?: string | null | undefined, city?: string | null | undefined, state?: string | null | undefined, zip?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type PeopleQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type PeopleQuery = { __typename?: 'Query', owners: Array<{ __typename?: 'Owner', _id?: any | null | undefined, firstName?: string | null | undefined, properties?: Array<{ __typename?: 'Property', name?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined>, cleaners: Array<{ __typename?: 'Cleaner', _id?: any | null | undefined, company?: string | null | undefined } | null | undefined>, vendors: Array<{ __typename?: 'Vendor', _id?: any | null | undefined, name?: string | null | undefined } | null | undefined> };
 
-export type OwnersQueryVariables = Exact<{ [key: string]: never; }>;
+export type OwnersQueryVariables = Exact<{
+  _id?: InputMaybe<Scalars['ObjectId']>;
+}>;
 
 
 export type OwnersQuery = { __typename?: 'Query', owners: Array<{ __typename?: 'Owner', _id?: any | null | undefined, firstName?: string | null | undefined, lastName?: string | null | undefined } | null | undefined> };
+
+export type VendorsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type VendorsQuery = { __typename?: 'Query', vendors: Array<{ __typename?: 'Vendor', _id?: any | null | undefined, name?: string | null | undefined } | null | undefined> };
+
+export type CleanersQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CleanersQuery = { __typename?: 'Query', cleaners: Array<{ __typename?: 'Cleaner', _id?: any | null | undefined, company?: string | null | undefined } | null | undefined> };
 
 export type AddPropertyMutationVariables = Exact<{
   name?: InputMaybe<Scalars['String']>;
@@ -1030,12 +1049,21 @@ export type AddPropertyMutationVariables = Exact<{
 }>;
 
 
-export type AddPropertyMutation = { __typename?: 'Mutation', insertOneProperty?: { __typename?: 'Property', name?: string | null | undefined, address?: { __typename?: 'PropertyAddress', street?: string | null | undefined, city?: string | null | undefined, state?: string | null | undefined, zip?: string | null | undefined } | null | undefined, details?: { __typename?: 'PropertyDetail', bedrooms?: string | null | undefined, bathrooms?: string | null | undefined, guests?: string | null | undefined } | null | undefined } | null | undefined };
+export type AddPropertyMutation = { __typename?: 'Mutation', insertOneProperty?: { __typename?: 'Property', _id?: any | null | undefined, name?: string | null | undefined, address?: { __typename?: 'PropertyAddress', street?: string | null | undefined, city?: string | null | undefined, state?: string | null | undefined, zip?: string | null | undefined } | null | undefined, details?: { __typename?: 'PropertyDetail', bedrooms?: string | null | undefined, bathrooms?: string | null | undefined, guests?: string | null | undefined } | null | undefined } | null | undefined };
+
+export type LinkOwnerMutationVariables = Exact<{
+  owner?: InputMaybe<Scalars['ObjectId']>;
+  property?: InputMaybe<Scalars['ObjectId']>;
+}>;
+
+
+export type LinkOwnerMutation = { __typename?: 'Mutation', updateOneOwner?: { __typename?: 'Owner', _id?: any | null | undefined, address?: string | null | undefined, email?: string | null | undefined, firstName?: string | null | undefined, lastName?: string | null | undefined, phone?: string | null | undefined, role?: string | null | undefined, stage?: string | null | undefined } | null | undefined };
 
 
 export const PropertiesDocument = gql`
     query Properties {
   properties {
+    _id
     name
     status
     owner {
@@ -1047,6 +1075,30 @@ export const PropertiesDocument = gql`
 
 export function usePropertiesQuery(options: Omit<Urql.UseQueryArgs<never, PropertiesQueryVariables>, 'query'> = {}) {
   return Urql.useQuery<PropertiesQuery>({ query: PropertiesDocument, ...options });
+};
+export const PropertyDocument = gql`
+    query Property($_id: ObjectId) {
+  property(query: {_id: $_id}) {
+    _id
+    name
+    status
+    owner {
+      _id
+      firstName
+      lastName
+    }
+    address {
+      street
+      city
+      state
+      zip
+    }
+  }
+}
+    `;
+
+export function usePropertyQuery(options: Omit<Urql.UseQueryArgs<never, PropertyQueryVariables>, 'query'> = {}) {
+  return Urql.useQuery<PropertyQuery>({ query: PropertyDocument, ...options });
 };
 export const PeopleDocument = gql`
     query People {
@@ -1072,8 +1124,8 @@ export function usePeopleQuery(options: Omit<Urql.UseQueryArgs<never, PeopleQuer
   return Urql.useQuery<PeopleQuery>({ query: PeopleDocument, ...options });
 };
 export const OwnersDocument = gql`
-    query Owners {
-  owners {
+    query Owners($_id: ObjectId) {
+  owners(query: {_id: $_id}) {
     _id
     firstName
     lastName
@@ -1084,11 +1136,36 @@ export const OwnersDocument = gql`
 export function useOwnersQuery(options: Omit<Urql.UseQueryArgs<never, OwnersQueryVariables>, 'query'> = {}) {
   return Urql.useQuery<OwnersQuery>({ query: OwnersDocument, ...options });
 };
+export const VendorsDocument = gql`
+    query Vendors {
+  vendors {
+    _id
+    name
+  }
+}
+    `;
+
+export function useVendorsQuery(options: Omit<Urql.UseQueryArgs<never, VendorsQueryVariables>, 'query'> = {}) {
+  return Urql.useQuery<VendorsQuery>({ query: VendorsDocument, ...options });
+};
+export const CleanersDocument = gql`
+    query Cleaners {
+  cleaners {
+    _id
+    company
+  }
+}
+    `;
+
+export function useCleanersQuery(options: Omit<Urql.UseQueryArgs<never, CleanersQueryVariables>, 'query'> = {}) {
+  return Urql.useQuery<CleanersQuery>({ query: CleanersDocument, ...options });
+};
 export const AddPropertyDocument = gql`
     mutation addProperty($name: String, $status: String, $street: String, $city: String, $state: String, $zip: String, $bedrooms: String, $bathrooms: String, $guests: String, $owner: ObjectId, $cleaner: ObjectId) {
   insertOneProperty(
     data: {name: $name, status: $status, address: {street: $street, city: $city, state: $state, zip: $zip}, details: {bedrooms: $bedrooms, bathrooms: $bathrooms, guests: $guests}, owner: {link: [$owner]}, cleaner: {link: [$cleaner]}}
   ) {
+    _id
     name
     address {
       street
@@ -1107,4 +1184,22 @@ export const AddPropertyDocument = gql`
 
 export function useAddPropertyMutation() {
   return Urql.useMutation<AddPropertyMutation, AddPropertyMutationVariables>(AddPropertyDocument);
+};
+export const LinkOwnerDocument = gql`
+    mutation LinkOwner($owner: ObjectId, $property: ObjectId) {
+  updateOneOwner(query: {_id: $owner}, set: {properties: {link: [$property]}}) {
+    _id
+    address
+    email
+    firstName
+    lastName
+    phone
+    role
+    stage
+  }
+}
+    `;
+
+export function useLinkOwnerMutation() {
+  return Urql.useMutation<LinkOwnerMutation, LinkOwnerMutationVariables>(LinkOwnerDocument);
 };

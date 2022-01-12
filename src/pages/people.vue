@@ -1,5 +1,5 @@
 <script setup>
-import { usePeopleQuery } from '~/graphql/graphql'
+import { usePeopleQuery } from '~/graphql/types'
 
 const { data, fetching, error } = usePeopleQuery()
 

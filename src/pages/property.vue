@@ -1,24 +1,40 @@
 <script setup>
-import { usePropertiesQuery } from '~/graphql/graphql'
+import { usePropertiesQuery } from '~/graphql/types'
 
 const { data, fetching, error } = usePropertiesQuery()
 </script>
 
 <template>
-  <main class="min-w-0 flex-1 border-t border-gray-200 lg:flex">
+  <el-container>
+    <el-aside>
+      <PropertySideList :data="data" :fetching="fetching" :error="error" />
+    </el-aside>
     <!-- Primary column -->
-    <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col overflow-y-auto lg:order-last">
-      <router-view />
-      {{ data }}
-    </section>
-    <!-- Secondary column (hidden on smaller screens) -->
-    <aside class="hidden lg:block lg:flex-shrink-0 lg:order-first">
-      <div class="h-full relative flex flex-col w-96 border-r border-gray-200 bg-gray-100 overflow-y-auto">
-        <PropertySideList :data="data" :fetching="fetching" :error="error" />
-      </div>
-    </aside>
-  </main>
+    <el-main class="property-main">
+      <el-container>
+        <el-header class="top-nav">
+          <AdminTopNav />
+        </el-header>
+        <el-main class="property-sub-main">
+          <router-view />
+        </el-main>
+      </el-container>
+    </el-main>
+  </el-container>
 </template>
+
+<style scoped>
+  .top-nav{
+    padding: 0 0 0 0 !important;
+    height: auto
+  }
+  .property-main{
+    padding: 10px 10px 10px 10px !important;
+  }
+  .property-sub-main{
+    padding: 10px 0 0 0 !important;
+  }
+</style>
 
 <route lang="yaml">
 meta:
