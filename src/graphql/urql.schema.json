@@ -1,0 +1,5687 @@
+{
+  "__schema": {
+    "queryType": {
+      "name": "Query"
+    },
+    "mutationType": {
+      "name": "Mutation"
+    },
+    "subscriptionType": null,
+    "types": [
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "Airdna",
+        "inputFields": [
+          {
+            "name": "path",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Cleaner",
+        "fields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "company",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "website",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CleanerInsertInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "website",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CleanerQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "_id_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "company",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "company_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "properties_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "properties_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "website",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "website_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CleanerUpdateInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "company_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "properties_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "website_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DefaultPayload",
+        "fields": [
+          {
+            "name": "status",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DeleteManyPayload",
+        "fields": [
+          {
+            "name": "deletedCount",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "InsertManyPayload",
+        "fields": [
+          {
+            "name": "insertedIds",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Mutation",
+        "fields": [
+          {
+            "name": "deleteManyCleaners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "DeleteManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteManyOwners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "DeleteManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteManyProperties",
+            "type": {
+              "kind": "OBJECT",
+              "name": "DeleteManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteManyVendors",
+            "type": {
+              "kind": "OBJECT",
+              "name": "DeleteManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteOneCleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerQueryInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteOneOwner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerQueryInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteOneProperty",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyQueryInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteOneVendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorQueryInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertManyCleaners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "InsertManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "LIST",
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "CleanerInsertInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertManyOwners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "InsertManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "LIST",
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "OwnerInsertInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertManyProperties",
+            "type": {
+              "kind": "OBJECT",
+              "name": "InsertManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "LIST",
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "PropertyInsertInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertManyVendors",
+            "type": {
+              "kind": "OBJECT",
+              "name": "InsertManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "LIST",
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "VendorInsertInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertOneCleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerInsertInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertOneOwner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerInsertInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertOneProperty",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyInsertInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "insertOneVendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorInsertInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "replaceOneCleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "replaceOneOwner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "replaceOneProperty",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "replaceOneVendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateManyCleaners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "UpdateManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateManyOwners",
+            "type": {
+              "kind": "OBJECT",
+              "name": "UpdateManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateManyProperties",
+            "type": {
+              "kind": "OBJECT",
+              "name": "UpdateManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateManyVendors",
+            "type": {
+              "kind": "OBJECT",
+              "name": "UpdateManyPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateOneCleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateOneOwner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateOneProperty",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateOneVendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "set",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorUpdateInput",
+                    "ofType": null
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "upsertOneCleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CleanerInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "upsertOneOwner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "OwnerInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "upsertOneProperty",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PropertyInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "upsertOneVendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "data",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "VendorInsertInput",
+                    "ofType": null
+                  }
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Owner",
+        "fields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "firstName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "lastName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Property",
+                "ofType": null
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "role",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "stage",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "OwnerInsertInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "OwnerPropertiesRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "role",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "OwnerPropertiesRelationInput",
+        "inputFields": [
+          {
+            "name": "create",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "PropertyInsertInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "link",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "OwnerQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "_id_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "address_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "firstName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "firstName_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "lastName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "lastName_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "PropertyQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "properties_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "PropertyQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "properties_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "PropertyQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "role",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "role_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "stage",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "stage_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "OwnerUpdateInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "firstName_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "lastName_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "OwnerPropertiesRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "properties_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "role_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "stage_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Property",
+        "fields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyAddress",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "bookings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "cleaner",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Cleaner",
+                "ofType": null
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "cleanings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "details",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyDetail",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "events",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "management",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PropertyManagement",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "owner",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Owner",
+                "ofType": null
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "pms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "todos",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyAddress",
+        "fields": [
+          {
+            "name": "city",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "state",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "street",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "zip",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyAddressInsertInput",
+        "inputFields": [
+          {
+            "name": "city",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyAddressQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyAddressQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyAddressQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "city",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "city_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "state",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "state_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "street",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "street_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "zip",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "zip_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyAddressUpdateInput",
+        "inputFields": [
+          {
+            "name": "city",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "city_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "state_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "street_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "zip_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyCleanerRelationInput",
+        "inputFields": [
+          {
+            "name": "create",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CleanerInsertInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "link",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyDetail",
+        "fields": [
+          {
+            "name": "HOT",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "bathrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "bedrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "entry",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "guests",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDetailInsertInput",
+        "inputFields": [
+          {
+            "name": "HOT",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDetailQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDetailQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "HOT",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "HOT_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyDetailQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "bathrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bathrooms_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bedrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bedrooms_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "entry",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "entry_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "guests",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "guests_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyDetailUpdateInput",
+        "inputFields": [
+          {
+            "name": "HOT",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "HOT_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bathrooms_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bedrooms_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "entry_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "guests_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyInsertInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyAddressInsertInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "bookings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "cleaner",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyCleanerRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "cleanings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "details",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyDetailInsertInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "events",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "management",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyManagementInsertInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "owner",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyOwnerRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "pms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "todos",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PropertyManagement",
+        "fields": [
+          {
+            "name": "income",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "start",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyManagementInsertInput",
+        "inputFields": [
+          {
+            "name": "income",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyManagementQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyManagementQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyManagementQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "income",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "income_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "start",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "start_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyManagementUpdateInput",
+        "inputFields": [
+          {
+            "name": "income",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "income_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "start_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyOwnerRelationInput",
+        "inputFields": [
+          {
+            "name": "create",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "OwnerInsertInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "link",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "_id_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyAddressQueryInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "address_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bookings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bookings_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bookings_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bookings_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "cleaner",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CleanerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "cleaner_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "cleaner_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CleanerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "cleaner_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CleanerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "cleanings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "cleanings_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "cleanings_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "cleanings_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "details",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyDetailQueryInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "details_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "events",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "events_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "events_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "events_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "management",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyManagementQueryInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "management_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "name_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "owner",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "OwnerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "owner_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "owner_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "OwnerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "owner_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "OwnerQueryInput",
+                "ofType": null
+              }
+            }
+          },
+          {
+            "name": "pms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "pms_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "status",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "status_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "todos",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "todos_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "todos_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "todos_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "PropertyUpdateInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "address",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyAddressUpdateInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "address_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "bookings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "bookings_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "cleaner",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyCleanerRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "cleaner_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "cleanings",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "cleanings_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "details",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyDetailUpdateInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "details_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "events",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "events_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "management",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyManagementUpdateInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "management_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "owner",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PropertyOwnerRelationInput",
+              "ofType": null
+            }
+          },
+          {
+            "name": "owner_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "pms_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "status_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "todos",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "todos_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Query",
+        "fields": [
+          {
+            "name": "airdna",
+            "type": {
+              "kind": "OBJECT",
+              "name": "DefaultPayload",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "Airdna",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "cleaner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cleaner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "cleaners",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Cleaner",
+                  "ofType": null
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "limit",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CleanerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "sortBy",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            ]
+          },
+          {
+            "name": "owner",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Owner",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "owners",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Owner",
+                  "ofType": null
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "limit",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "OwnerQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "sortBy",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            ]
+          },
+          {
+            "name": "properties",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Property",
+                  "ofType": null
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "limit",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "sortBy",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            ]
+          },
+          {
+            "name": "property",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Property",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "PropertyQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "vendor",
+            "type": {
+              "kind": "OBJECT",
+              "name": "Vendor",
+              "ofType": null
+            },
+            "args": [
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            ]
+          },
+          {
+            "name": "vendors",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "Vendor",
+                  "ofType": null
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "limit",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              },
+              {
+                "name": "query",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              },
+              {
+                "name": "sortBy",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Any"
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "UpdateManyPayload",
+        "fields": [
+          {
+            "name": "matchedCount",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "modifiedCount",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Vendor",
+        "fields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          },
+          {
+            "name": "projects",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "VendorInsertInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "projects",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "type",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "VendorQueryInput",
+        "inputFields": [
+          {
+            "name": "AND",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "OR",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "VendorQueryInput",
+                  "ofType": null
+                }
+              }
+            }
+          },
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "_id_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "email_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "name_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "phone_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "projects",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "projects_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "projects_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "projects_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "type",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_exists",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_gt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_gte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_in",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "type_lt",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_lte",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_ne",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_nin",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "VendorUpdateInput",
+        "inputFields": [
+          {
+            "name": "_id",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "_id_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "email_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "name_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "phone_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "projects",
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            }
+          },
+          {
+            "name": "projects_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          },
+          {
+            "name": "type_unset",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Any"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Any"
+      }
+    ],
+    "directives": []
+  }
+}

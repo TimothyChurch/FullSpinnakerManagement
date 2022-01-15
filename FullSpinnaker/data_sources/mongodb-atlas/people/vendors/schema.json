@@ -1,0 +1,26 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "email": {
+            "bsonType": "string"
+        },
+        "name": {
+            "bsonType": "string"
+        },
+        "phone": {
+            "bsonType": "string"
+        },
+        "projects": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "type": {
+            "bsonType": "string"
+        }
+    },
+    "title": "vendor"
+}

@@ -1,0 +1,1111 @@
+{
+  "permission": "full",
+  "property_details": {
+    "address": "1314 11th St Galveston, Tx 77550",
+    "address_lookup": "1314 11 ST, GALVESTON, TX 77550",
+    "zipcode": "77550",
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "accommodates": 6,
+    "property_value": 433000,
+    "location": {
+      "lat": 29.300452,
+      "lng": -94.776946
+    },
+    "currency_symbol": "$"
+  },
+  "property_stats": {
+    "revenue": {
+      "2022": {
+        "1": 1869,
+        "2": 2281,
+        "3": 4774,
+        "4": 4632,
+        "5": 5548,
+        "6": 7297,
+        "7": 8461,
+        "8": 5137,
+        "9": 3875,
+        "10": 3148,
+        "11": 3471,
+        "12": 2901
+      },
+      "ltm": 53394
+    },
+    "adr": {
+      "2022": {
+        "1": 231.3,
+        "2": 233.67,
+        "3": 263.99,
+        "4": 259.73,
+        "5": 290.65,
+        "6": 299.22,
+        "7": 315.61,
+        "8": 293.4,
+        "9": 283.48,
+        "10": 254.45,
+        "11": 280.06,
+        "12": 248.91
+      },
+      "ltm": 271
+    },
+    "occupancy": {
+      "2022": {
+        "1": 0.26,
+        "2": 0.35,
+        "3": 0.58,
+        "4": 0.59,
+        "5": 0.62,
+        "6": 0.81,
+        "7": 0.86,
+        "8": 0.56,
+        "9": 0.46,
+        "10": 0.4,
+        "11": 0.41,
+        "12": 0.38
+      },
+      "ltm": 0.54
+    },
+    "total_comps": 43,
+    "historical_valuation": {
+      "2020": {
+        "1": 35700,
+        "2": 35478,
+        "3": 35444,
+        "4": 34793,
+        "5": 35764,
+        "6": 36426,
+        "7": 36855,
+        "8": 37426,
+        "9": 37592,
+        "10": 38441,
+        "11": 39045,
+        "12": 38931
+      },
+      "2021": {
+        "1": 39348,
+        "2": 39877,
+        "3": 41398,
+        "4": 43755,
+        "5": 45454,
+        "6": 47419,
+        "7": 50135,
+        "8": 50889,
+        "9": 51771,
+        "10": 51993,
+        "11": 52853,
+        "12": 53394
+      },
+      "mom_perc_chg": 1.02,
+      "yoy_perc_chg": 37.15
+    },
+    "revenue_range": {
+      "2022": {
+        "1": {
+          "upper": 1982,
+          "lower": 1755
+        },
+        "2": {
+          "upper": 2436,
+          "lower": 2125
+        },
+        "3": {
+          "upper": 5022,
+          "lower": 4525
+        },
+        "4": {
+          "upper": 4829,
+          "lower": 4434
+        },
+        "5": {
+          "upper": 5806,
+          "lower": 5289
+        },
+        "6": {
+          "upper": 7564,
+          "lower": 7029
+        },
+        "7": {
+          "upper": 8755,
+          "lower": 8166
+        },
+        "8": {
+          "upper": 5336,
+          "lower": 4937
+        },
+        "9": {
+          "upper": 4062,
+          "lower": 3687
+        },
+        "10": {
+          "upper": 3336,
+          "lower": 2959
+        },
+        "11": {
+          "upper": 3699,
+          "lower": 3242
+        },
+        "12": {
+          "upper": 3077,
+          "lower": 2724
+        }
+      },
+      "ltm": {
+        "upper": 55910,
+        "lower": 50877
+      }
+    }
+  },
+  "comps": [
+    {
+      "airbnb_property_id": 33009701,
+      "cover_img": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-33009701/original/fd2c4549-c384-4389-a26a-4b69827af13a.jpeg?aki_policy=x_large",
+      "title": "Beachfront Resort Condo - w/ Sweeping Ocean Views",
+      "room_type": "Entire home/apt",
+      "property_type": "Condominium (condo)",
+      "reviews": 62,
+      "rating": 9.9,
+      "platforms": {
+        "airbnb_property_id": "33009701",
+        "vrbo_property_id": "7657334ha"
+      },
+      "distance_meters": 867,
+      "listing_url": "https://www.airbnb.com/rooms/33009701",
+      "location": {
+        "lat": 29.30726,
+        "lng": -94.77255
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 2559,
+            "2": 4092,
+            "3": 9479,
+            "4": 9772,
+            "5": 10168,
+            "6": 11319,
+            "7": 10395,
+            "8": 10329,
+            "9": 6795,
+            "10": 5908,
+            "11": 6343,
+            "12": 7100
+          },
+          "ltm": 94260
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 2694,
+            "2": 4573,
+            "3": 9479,
+            "4": 9772,
+            "5": 11254,
+            "6": 14528,
+            "7": 16311,
+            "8": 10329,
+            "9": 6795,
+            "10": 5908,
+            "11": 6343,
+            "12": 7100
+          },
+          "ltm": 105088
+        },
+        "adr": {
+          "2021": {
+            "1": 284,
+            "2": 314,
+            "3": 394,
+            "4": 349,
+            "5": 442,
+            "6": 565,
+            "7": 611,
+            "8": 430,
+            "9": 339,
+            "10": 310,
+            "11": 317,
+            "12": 295
+          },
+          "ltm": 388
+        },
+        "days_available": {
+          "ltm": 336
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.3,
+            "2": 0.52,
+            "3": 0.77,
+            "4": 0.93,
+            "5": 0.85,
+            "6": 0.91,
+            "7": 0.94,
+            "8": 0.77,
+            "9": 0.67,
+            "10": 0.61,
+            "11": 0.67,
+            "12": 0.77
+          },
+          "ltm": 0.72
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 31560337,
+      "cover_img": "https://a0.muscache.com/im/pictures/miso/Hosting-31560337/original/97fc0c2d-d577-4f80-9a11-cf28b0f8901d.jpeg?aki_policy=x_large",
+      "title": "The Blue Oleander",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 80,
+      "rating": 9.9,
+      "platforms": {
+        "airbnb_property_id": "31560337",
+        "vrbo_property_id": null
+      },
+      "distance_meters": 1299,
+      "listing_url": "https://www.airbnb.com/rooms/31560337",
+      "location": {
+        "lat": 29.29296,
+        "lng": -94.78724
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 3700,
+            "2": 1725,
+            "3": 2975,
+            "4": 2400,
+            "5": 6603,
+            "6": 9671,
+            "7": 11083,
+            "8": 5666,
+            "9": 3025,
+            "10": 825,
+            "11": 3550,
+            "12": 2158
+          },
+          "ltm": 53383
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 4058,
+            "2": 1725,
+            "3": 2975,
+            "4": 3802,
+            "5": 6968,
+            "6": 9671,
+            "7": 11083,
+            "8": 5666,
+            "9": 3724,
+            "10": 1137,
+            "11": 3639,
+            "12": 2170
+          },
+          "ltm": 56624
+        },
+        "adr": {
+          "2021": {
+            "1": 264,
+            "2": 287,
+            "3": 371,
+            "4": 342,
+            "5": 347,
+            "6": 371,
+            "7": 382,
+            "8": 404,
+            "9": 432,
+            "10": 412,
+            "11": 355,
+            "12": 359
+          },
+          "ltm": 361
+        },
+        "days_available": {
+          "ltm": 333
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.52,
+            "2": 0.21,
+            "3": 0.26,
+            "4": 0.35,
+            "5": 0.66,
+            "6": 0.87,
+            "7": 0.94,
+            "8": 0.45,
+            "9": 0.33,
+            "10": 0.07,
+            "11": 0.37,
+            "12": 0.21
+          },
+          "ltm": 0.44
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 1000424259,
+      "cover_img": "https://media.vrbo.com/lodging/63000000/62600000/62599000/62599000/90-0606475f.c10.jpg",
+      "title": "Cozy Bungalow located 2 blocks from the beach-",
+      "room_type": "Entire home/apt",
+      "property_type": "Bungalow",
+      "reviews": 13,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": null,
+        "vrbo_property_id": "483722"
+      },
+      "distance_meters": 627,
+      "listing_url": "https://www.vrbo.com/483722",
+      "location": {
+        "lat": 29.297838,
+        "lng": -94.782675
+      },
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 0,
+            "2": 0,
+            "3": 4669,
+            "4": 6432,
+            "5": 7120,
+            "6": 6811,
+            "7": 6363,
+            "8": 7034,
+            "9": 7270,
+            "10": 5970,
+            "11": 6400,
+            "12": 4600
+          },
+          "ltm": 62670
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 4266,
+            "2": 4178,
+            "3": 4669,
+            "4": 6432,
+            "5": 7120,
+            "6": 6811,
+            "7": 6942,
+            "8": 7034,
+            "9": 7270,
+            "10": 5970,
+            "11": 6400,
+            "12": 6042
+          },
+          "ltm": 73138
+        },
+        "adr": {
+          "2021": {
+            "1": null,
+            "2": null,
+            "3": 150,
+            "4": 221,
+            "5": 245,
+            "6": 234,
+            "7": 244,
+            "8": 242,
+            "9": 250,
+            "10": 248,
+            "11": 237,
+            "12": 242
+          },
+          "ltm": 231
+        },
+        "days_available": {
+          "ltm": 294
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0.97,
+            "5": 0.94,
+            "6": 0.97,
+            "7": 0.93,
+            "8": 0.94,
+            "9": 0.97,
+            "10": 0.77,
+            "11": 0.9,
+            "12": 0.86
+          },
+          "ltm": 0.92
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 11924391,
+      "cover_img": "https://a0.muscache.com/im/pictures/a0149c33-1d94-46cb-ab08-42d4f43a6985.jpg?aki_policy=x_large",
+      "title": "Cozy Beach Bungalow close to everything!",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 95,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": "11924391",
+        "vrbo_property_id": null
+      },
+      "distance_meters": 643,
+      "listing_url": "https://www.airbnb.com/rooms/11924391",
+      "location": {
+        "lat": 29.29805,
+        "lng": -94.78298
+      },
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 2495,
+            "2": 495,
+            "3": 5930,
+            "4": 3972,
+            "5": 5100,
+            "6": 6176,
+            "7": 5490,
+            "8": 3455,
+            "9": 2955,
+            "10": 2210,
+            "11": 2300,
+            "12": 1690
+          },
+          "ltm": 42270
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 2495,
+            "2": 2467,
+            "3": 5930,
+            "4": 4146,
+            "5": 5867,
+            "6": 6176,
+            "7": 6325,
+            "8": 3909,
+            "9": 4354,
+            "10": 2284,
+            "11": 2300,
+            "12": 2796
+          },
+          "ltm": 49053
+        },
+        "adr": {
+          "2021": {
+            "1": 155,
+            "2": 247,
+            "3": 211,
+            "4": 220,
+            "5": 242,
+            "6": 228,
+            "7": 238,
+            "8": 215,
+            "9": 227,
+            "10": 221,
+            "11": 255,
+            "12": 211
+          },
+          "ltm": 223
+        },
+        "days_available": {
+          "ltm": 302
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.52,
+            "2": 0.5,
+            "3": 0.9,
+            "4": 0.64,
+            "5": 0.81,
+            "6": 0.9,
+            "7": 0.85,
+            "8": 0.57,
+            "9": 0.87,
+            "10": 0.33,
+            "11": 0.3,
+            "12": 0.36
+          },
+          "ltm": 0.63
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 32067131,
+      "cover_img": "https://a0.muscache.com/im/pictures/8007d22e-171c-4f5c-bf9c-7731464550cb.jpg?aki_policy=x_large",
+      "title": "1857 Muir House- in Heart of the Historic District",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 48,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": "32067131",
+        "vrbo_property_id": null
+      },
+      "distance_meters": 712,
+      "listing_url": "https://www.airbnb.com/rooms/32067131",
+      "location": {
+        "lat": 29.30554,
+        "lng": -94.78142
+      },
+      "bedrooms": 3,
+      "bathrooms": 1.5,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 0,
+            "2": 2150,
+            "3": 5941,
+            "4": 4103,
+            "5": 5725,
+            "6": 6420,
+            "7": 6573,
+            "8": 5470,
+            "9": 2390,
+            "10": 2575,
+            "11": 3305,
+            "12": 3771
+          },
+          "ltm": 48426
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 0,
+            "2": 2218,
+            "3": 5941,
+            "4": 4103,
+            "5": 5725,
+            "6": 6420,
+            "7": 6798,
+            "8": 5470,
+            "9": 2483,
+            "10": 2575,
+            "11": 3305,
+            "12": 3771
+          },
+          "ltm": 48814
+        },
+        "adr": {
+          "2021": {
+            "1": null,
+            "2": 238,
+            "3": 247,
+            "4": 293,
+            "5": 301,
+            "6": 305,
+            "7": 298,
+            "8": 303,
+            "9": 298,
+            "10": 321,
+            "11": 330,
+            "12": 314
+          },
+          "ltm": 295
+        },
+        "days_available": {
+          "ltm": 362
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0,
+            "2": 0.33,
+            "3": 0.77,
+            "4": 0.47,
+            "5": 0.61,
+            "6": 0.7,
+            "7": 0.73,
+            "8": 0.58,
+            "9": 0.28,
+            "10": 0.26,
+            "11": 0.33,
+            "12": 0.39
+          },
+          "ltm": 0.45
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 44322828,
+      "cover_img": "https://a0.muscache.com/im/pictures/d5f04c1b-a3b0-462f-a46c-16cc77549122.jpg?aki_policy=x_large",
+      "title": "Ocean Views in the heart of Galveston",
+      "room_type": "Entire home/apt",
+      "property_type": "Condominium (condo)",
+      "reviews": 16,
+      "rating": 9.8,
+      "platforms": {
+        "airbnb_property_id": "44322828",
+        "vrbo_property_id": "2022081"
+      },
+      "distance_meters": 821,
+      "listing_url": "https://www.airbnb.com/rooms/44322828",
+      "location": {
+        "lat": 29.30619,
+        "lng": -94.7716
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 8,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 1358,
+            "2": 2007,
+            "3": 3177,
+            "4": 5741,
+            "5": 8658,
+            "6": 7514,
+            "7": 8161,
+            "8": 4860,
+            "9": 4538,
+            "10": 4474,
+            "11": 2215,
+            "12": 2106
+          },
+          "ltm": 54811
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 1358,
+            "2": 2007,
+            "3": 3995,
+            "4": 5741,
+            "5": 9648,
+            "6": 10451,
+            "7": 9223,
+            "8": 4860,
+            "9": 4538,
+            "10": 4474,
+            "11": 2215,
+            "12": 3170
+          },
+          "ltm": 61682
+        },
+        "adr": {
+          "2021": {
+            "1": 339,
+            "2": 286,
+            "3": 353,
+            "4": 337,
+            "5": 309,
+            "6": 395,
+            "7": 388,
+            "8": 405,
+            "9": 302,
+            "10": 298,
+            "11": 443,
+            "12": 300
+          },
+          "ltm": 346
+        },
+        "days_available": {
+          "ltm": 336
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.13,
+            "2": 0.25,
+            "3": 0.36,
+            "4": 0.57,
+            "5": 1,
+            "6": 1,
+            "7": 0.75,
+            "8": 0.39,
+            "9": 0.5,
+            "10": 0.48,
+            "11": 0.17,
+            "12": 0.28
+          },
+          "ltm": 0.47
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 1003513747,
+      "cover_img": "https://media.vrbo.com/lodging/39000000/38320000/38317700/38317662/420b6644.c10.jpg",
+      "title": "Gorgeous ocean views, HUGE balcony, luxury accomodations with free wifi.",
+      "room_type": "Entire home/apt",
+      "property_type": "Condo",
+      "reviews": 46,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": null,
+        "vrbo_property_id": "1683165"
+      },
+      "distance_meters": 834,
+      "listing_url": "https://www.vrbo.com/1683165",
+      "location": {
+        "lat": 29.3066009,
+        "lng": -94.7719812
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 8,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 2213,
+            "2": 1830,
+            "3": 4295,
+            "4": 3664,
+            "5": 5417,
+            "6": 8458,
+            "7": 2405,
+            "8": 6306,
+            "9": 3377,
+            "10": 5015,
+            "11": 4648,
+            "12": 4157
+          },
+          "ltm": 51787
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 2394,
+            "2": 2479,
+            "3": 7344,
+            "4": 5692,
+            "5": 7449,
+            "6": 10945,
+            "7": 9913,
+            "8": 8186,
+            "9": 4969,
+            "10": 6808,
+            "11": 4824,
+            "12": 5396
+          },
+          "ltm": 76402
+        },
+        "adr": {
+          "2021": {
+            "1": 201,
+            "2": 261,
+            "3": 357,
+            "4": 366,
+            "5": 386,
+            "6": 445,
+            "7": 481,
+            "8": 420,
+            "9": 375,
+            "10": 334,
+            "11": 387,
+            "12": 346
+          },
+          "ltm": 363
+        },
+        "days_available": {
+          "ltm": 252
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.41,
+            "2": 0.32,
+            "3": 0.71,
+            "4": 0.5,
+            "5": 0.64,
+            "6": 0.86,
+            "7": 0.56,
+            "8": 0.6,
+            "9": 0.45,
+            "10": 0.79,
+            "11": 0.41,
+            "12": 0.6
+          },
+          "ltm": 0.57
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 45380838,
+      "cover_img": "https://a0.muscache.com/im/pictures/1999d227-a851-42f4-be19-64010062d4ab.jpg?aki_policy=x_large",
+      "title": "‘Pelican Cottage’ with Porch - Walk to Seawall!",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 14,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": "45380838",
+        "vrbo_property_id": "9495802ha"
+      },
+      "distance_meters": 673,
+      "listing_url": "https://www.airbnb.com/rooms/45380838",
+      "location": {
+        "lat": 29.30575,
+        "lng": -94.78034
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 376,
+            "2": 376,
+            "3": 2704,
+            "4": 2396,
+            "5": 4474,
+            "6": 6937,
+            "7": 8766,
+            "8": 3314,
+            "9": 6106,
+            "10": 2647,
+            "11": 1272,
+            "12": 0
+          },
+          "ltm": 39370
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 376,
+            "2": 376,
+            "3": 2704,
+            "4": 2396,
+            "5": 4474,
+            "6": 6937,
+            "7": 8766,
+            "8": 3314,
+            "9": 6106,
+            "10": 3783,
+            "11": 2598,
+            "12": 1602
+          },
+          "ltm": 43434
+        },
+        "adr": {
+          "2021": {
+            "1": 376,
+            "2": 376,
+            "3": 300,
+            "4": 299,
+            "5": 344,
+            "6": 346,
+            "7": 365,
+            "8": 276,
+            "9": 234,
+            "10": 264,
+            "11": 318,
+            "12": null
+          },
+          "ltm": 318
+        },
+        "days_available": {
+          "ltm": 287
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.03,
+            "2": 0.04,
+            "3": 0.29,
+            "4": 0.27,
+            "5": 0.42,
+            "6": 0.67,
+            "7": 0.77,
+            "8": 0.39,
+            "9": 0.87,
+            "10": 1,
+            "11": 1,
+            "12": 0
+          },
+          "ltm": 0.43
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 37059428,
+      "cover_img": "https://a0.muscache.com/im/pictures/46fe491e-cdc0-46d0-9c47-38625dd2a503.jpg?aki_policy=x_large",
+      "title": "🏖️East End 1913 Home. Walk to coffee and dinner!",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 16,
+      "rating": 10,
+      "platforms": {
+        "airbnb_property_id": "37059428",
+        "vrbo_property_id": null
+      },
+      "distance_meters": 1039,
+      "listing_url": "https://www.airbnb.com/rooms/37059428",
+      "location": {
+        "lat": 29.30716,
+        "lng": -94.78443
+      },
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": 1595,
+            "6": 5575,
+            "7": 7800,
+            "8": 2443,
+            "9": 2848,
+            "10": 1488,
+            "11": 1573,
+            "12": 1534
+          },
+          "ltm": 24858
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 580,
+            "2": 774,
+            "3": 2894,
+            "4": 2495,
+            "5": 1595,
+            "6": 5784,
+            "7": 7800,
+            "8": 2602,
+            "9": 2848,
+            "10": 1488,
+            "11": 1573,
+            "12": 1534
+          },
+          "ltm": 31971
+        },
+        "adr": {
+          "2021": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": 319,
+            "6": 309,
+            "7": 354,
+            "8": 349,
+            "9": 284,
+            "10": 248,
+            "11": 314,
+            "12": 255
+          },
+          "ltm": 304
+        },
+        "days_available": {
+          "ltm": 243
+        },
+        "occupancy": {
+          "2021": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": 0.16,
+            "6": 0.62,
+            "7": 0.71,
+            "8": 0.23,
+            "9": 0.33,
+            "10": 0.19,
+            "11": 0.17,
+            "12": 0.19
+          },
+          "ltm": 0.34
+        }
+      }
+    },
+    {
+      "airbnb_property_id": 43753862,
+      "cover_img": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-43753862/original/45382075-14cd-4803-a521-bd9fcd910639.jpeg?aki_policy=x_large",
+      "title": "Only 10 min Walk to Beach - Fenced Yard - Dogs Welcome - Free Attraction Tickets - Near Hotel Galvez",
+      "room_type": "Entire home/apt",
+      "property_type": "Residential home",
+      "reviews": 28,
+      "rating": 9.6,
+      "platforms": {
+        "airbnb_property_id": "43753862",
+        "vrbo_property_id": "9467576ha"
+      },
+      "distance_meters": 1133,
+      "listing_url": "https://www.airbnb.com/rooms/43753862",
+      "location": {
+        "lat": 29.294,
+        "lng": -94.786
+      },
+      "bedrooms": 3,
+      "bathrooms": 1.5,
+      "accommodates": 6,
+      "stats": {
+        "revenue": {
+          "2021": {
+            "1": 565,
+            "2": 672,
+            "3": 2298,
+            "4": 4114,
+            "5": 4969,
+            "6": 6196,
+            "7": 7201,
+            "8": 3444,
+            "9": 1417,
+            "10": 0,
+            "11": 1086,
+            "12": 1620
+          },
+          "ltm": 33584
+        },
+        "revenue_potential": {
+          "2021": {
+            "1": 565,
+            "2": 672,
+            "3": 2298,
+            "4": 4114,
+            "5": 4969,
+            "6": 6196,
+            "7": 7201,
+            "8": 3742,
+            "9": 1417,
+            "10": 0,
+            "11": 1086,
+            "12": 2458
+          },
+          "ltm": 34721
+        },
+        "adr": {
+          "2021": {
+            "1": 565,
+            "2": 224,
+            "3": 229,
+            "4": 257,
+            "5": 331,
+            "6": 281,
+            "7": 342,
+            "8": 313,
+            "9": 283,
+            "10": null,
+            "11": 362,
+            "12": 231
+          },
+          "ltm": 311
+        },
+        "days_available": {
+          "ltm": 345
+        },
+        "occupancy": {
+          "2021": {
+            "1": 0.03,
+            "2": 0.11,
+            "3": 0.32,
+            "4": 0.53,
+            "5": 0.48,
+            "6": 0.73,
+            "7": 0.68,
+            "8": 0.39,
+            "9": 0.17,
+            "10": 0,
+            "11": 0.1,
+            "12": 0.5
+          },
+          "ltm": 0.31
+        }
+      }
+    }
+  ]
+}

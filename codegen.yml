@@ -10,4 +10,8 @@ generates:
   src/graphql/graphql.schema.json:
     plugins:
       - "introspection"
-      
+  src/graphql/urql.schema.json:
+    plugins:
+      - "urql-introspection"
+    config:
+      includeInputs: true

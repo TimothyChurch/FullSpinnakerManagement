@@ -16,6 +16,7 @@
 <style scoped>
   .LayoutMain {
     padding: 0;
+    height: 100vh
   }
 
 </style>

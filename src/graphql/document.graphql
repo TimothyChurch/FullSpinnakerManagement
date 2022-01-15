@@ -4,6 +4,7 @@ query Properties {
     name
     status
     owner {
+      _id
       firstName
     }
   }

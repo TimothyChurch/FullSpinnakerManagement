@@ -28,7 +28,7 @@ const data = { _id: form.owner }
 const { data: people } = usePeopleQuery()
 
 const addProperty = useAddPropertyMutation()
-const owner = useOwnersQuery(data)
+const owners = useOwnersQuery(data)
 
 const temp = addProperty.data.value
 

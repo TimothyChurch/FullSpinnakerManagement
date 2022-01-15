@@ -1,0 +1,35 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "address": {
+            "bsonType": "string"
+        },
+        "email": {
+            "bsonType": "string"
+        },
+        "firstName": {
+            "bsonType": "string"
+        },
+        "lastName": {
+            "bsonType": "string"
+        },
+        "phone": {
+            "bsonType": "string"
+        },
+        "properties": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "role": {
+            "bsonType": "string"
+        },
+        "stage": {
+            "bsonType": "string"
+        }
+    },
+    "title": "owner"
+}

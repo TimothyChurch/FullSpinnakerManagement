@@ -1,0 +1,19 @@
+{
+    "field_name": "airdna",
+    "function_name": "airdna",
+    "input_type": {
+        "properties": {
+            "path": {
+                "type": "string"
+            },
+            "urlQuery": {
+                "type": "object"
+            }
+        },
+        "title": "airdna",
+        "type": "object"
+    },
+    "input_type_format": "custom",
+    "on_type": "Query",
+    "payload_type_format": ""
+}

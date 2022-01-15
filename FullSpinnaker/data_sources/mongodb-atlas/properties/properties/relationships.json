@@ -1,0 +1,14 @@
+{
+    "cleaner": {
+        "ref": "#/relationship/mongodb-atlas/people/cleaners",
+        "source_key": "cleaner",
+        "foreign_key": "_id",
+        "is_list": true
+    },
+    "owner": {
+        "ref": "#/relationship/mongodb-atlas/people/owners",
+        "source_key": "owner",
+        "foreign_key": "_id",
+        "is_list": true
+    }
+}

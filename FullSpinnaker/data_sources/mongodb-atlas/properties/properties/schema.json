@@ -1,0 +1,101 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "address": {
+            "bsonType": "object",
+            "properties": {
+                "city": {
+                    "bsonType": "string"
+                },
+                "state": {
+                    "bsonType": "string"
+                },
+                "street": {
+                    "bsonType": "string"
+                },
+                "zip": {
+                    "bsonType": "string"
+                }
+            }
+        },
+        "bookings": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "cleaner": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "cleanings": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "details": {
+            "bsonType": "object",
+            "properties": {
+                "HOT": {
+                    "bsonType": "string"
+                },
+                "bathrooms": {
+                    "bsonType": "string"
+                },
+                "bedrooms": {
+                    "bsonType": "string"
+                },
+                "entry": {
+                    "bsonType": "string"
+                },
+                "guests": {
+                    "bsonType": "string"
+                }
+            }
+        },
+        "events": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "management": {
+            "bsonType": "object",
+            "properties": {
+                "income": {
+                    "bsonType": "string"
+                },
+                "start": {
+                    "bsonType": "date"
+                }
+            }
+        },
+        "name": {
+            "bsonType": "string"
+        },
+        "owner": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "pms": {
+            "bsonType": "objectId"
+        },
+        "status": {
+            "bsonType": "string"
+        },
+        "todos": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        }
+    },
+    "title": "property"
+}

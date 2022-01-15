@@ -1,4 +1,5 @@
 <script setup>
+import { House } from '@element-plus/icons-vue'
 const props = defineProps({
   data: Object,
   fetching: Boolean,
@@ -16,21 +17,37 @@ const props = defineProps({
     <div v-else-if="props.error">
       <h1>Error: {{ props.error }}</h1>
     </div>
-    <div v-else>
-      <el-scrollbar height="inherit">
-        <el-card v-for="property in props.data.properties" :key="property.name" class="py-4 flex">
+    <div v-else height="100vh">
+      <div>
+        <h1>Header area</h1>
+      </div>
+      <el-scrollbar height="100vh">
+        <div v-for="property in props.data.properties" :key="property.name" flex="auto">
           <router-link :to="`/property/${property._id}`">
-            <div class="ml-3">
-              <p class="text-sm font-medium text-gray-900">
-                {{ property.name }}
-              </p>
-              <p class="text-sm text-gray-500">
-                {{ property.status }}
-              </p>
-            </div>
+            <el-card class="list-card" :body-style="{ padding: '5px' }">
+              <el-row>
+                <el-col :span="5">
+                  <el-avatar :size="50" :icon="House" />
+                </el-col>
+                <el-col :span="18">
+                  <p class="text-sm font-medium text-gray-900">
+                    {{ property.name }}
+                  </p>
+                  <p class="text-sm text-gray-500">
+                    {{ property.status }}
+                  </p>
+                </el-col>
+              </el-row>
+            </el-card>
           </router-link>
-        </el-card>
+        </div>
       </el-scrollbar>
     </div>
   </div>
 </template>
+
+<style scoped>
+  .list-card{
+    padding: 0 0 0 0 !important;
+  }
+</style>

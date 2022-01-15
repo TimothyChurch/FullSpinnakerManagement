@@ -1,272 +1,94 @@
-input OwnerInsertInput {
-  properties: OwnerPropertiesRelationInput
-  address: String
-  email: String
-  stage: String
-  phone: String
-  firstName: String
-  _id: ObjectId
-  lastName: String
-  role: String
-}
-
-type Vendor {
-  _id: ObjectId
-  email: String
-  name: String
-  phone: String
-  projects: [ObjectId]
-  type: String
-}
-
-input OwnerQueryInput {
-  role_ne: String
-  role_in: [String]
-  _id_nin: [ObjectId]
-  _id_ne: ObjectId
-  email_ne: String
-  phone_ne: String
-  properties_nin: [PropertyQueryInput]
-  stage_nin: [String]
-  role_gt: String
-  firstName_gt: String
-  firstName_exists: Boolean
-  _id_gte: ObjectId
-  stage_lt: String
-  role_lt: String
-  firstName_ne: String
-  phone_in: [String]
-  lastName_lt: String
-  phone_gte: String
-  role_gte: String
-  address_exists: Boolean
-  role_nin: [String]
-  email_gt: String
-  role_lte: String
-  phone_lte: String
-  email_lte: String
-  stage_ne: String
-  _id_lt: ObjectId
-  phone: String
-  email_gte: String
-  lastName: String
-  lastName_exists: Boolean
-  _id_gt: ObjectId
-  AND: [OwnerQueryInput!]
-  address_gte: String
-  firstName: String
-  _id_lte: ObjectId
-  OR: [OwnerQueryInput!]
-  lastName_gt: String
-  stage_gte: String
-  lastName_gte: String
-  address_nin: [String]
-  address_lte: String
-  phone_gt: String
-  address_lt: String
-  lastName_ne: String
-  email_in: [String]
-  firstName_in: [String]
-  email: String
-  firstName_lte: String
-  stage: String
-  email_exists: Boolean
-  email_lt: String
-  stage_exists: Boolean
-  stage_gt: String
-  role: String
-  phone_lt: String
-  address_in: [String]
-  firstName_lt: String
-  _id_in: [ObjectId]
-  properties_exists: Boolean
-  properties_in: [PropertyQueryInput]
-  firstName_nin: [String]
-  email_nin: [String]
-  _id_exists: Boolean
-  address: String
-  phone_exists: Boolean
-  lastName_lte: String
-  address_ne: String
-  stage_in: [String]
-  address_gt: String
-  _id: ObjectId
-  properties: [PropertyQueryInput]
-  firstName_gte: String
-  stage_lte: String
-  lastName_in: [String]
-  lastName_nin: [String]
-  phone_nin: [String]
-  role_exists: Boolean
-}
-
-input PropertyAddressUpdateInput {
+input PropertyAddressQueryInput {
+  city_in: [String]
+  state_nin: [String]
+  state_exists: Boolean
+  city_gte: String
+  state_lt: String
+  zip_gte: String
+  AND: [PropertyAddressQueryInput!]
+  street_lt: String
+  street_lte: String
+  OR: [PropertyAddressQueryInput!]
+  zip_lte: String
+  zip_ne: String
+  zip_exists: Boolean
+  zip_nin: [String]
+  zip_gt: String
+  state_ne: String
+  street_exists: Boolean
+  street_in: [String]
   street: String
-  street_unset: Boolean
+  street_gt: String
+  street_nin: [String]
+  city_nin: [String]
+  city_exists: Boolean
+  city_lte: String
+  zip_in: [String]
+  street_gte: String
   zip: String
-  zip_unset: Boolean
+  city_gt: String
+  city_ne: String
+  state_gte: String
+  street_ne: String
+  city_lt: String
+  state_gt: String
   city: String
-  city_unset: Boolean
   state: String
-  state_unset: Boolean
+  zip_lt: String
+  state_in: [String]
+  state_lte: String
+}
+
+type PropertyDetail {
+  HOT: String
+  bathrooms: String
+  bedrooms: String
+  entry: String
+  guests: String
 }
 
 enum CleanerSortByInput {
-  _ID_DESC
-  COMPANY_DESC
-  WEBSITE_ASC
-  WEBSITE_DESC
-  _ID_ASC
   COMPANY_ASC
+  COMPANY_DESC
   EMAIL_ASC
-  EMAIL_DESC
   PHONE_ASC
   PHONE_DESC
+  _ID_ASC
+  _ID_DESC
+  WEBSITE_DESC
+  EMAIL_DESC
+  WEBSITE_ASC
 }
 
-type Property {
+input CleanerInsertInput {
+  phone: String
+  properties: [ObjectId]
+  website: String
   _id: ObjectId
-  address: PropertyAddress
-  bookings: [ObjectId]
-  cleaner: [Cleaner]
-  cleanings: [ObjectId]
-  details: PropertyDetail
-  events: [ObjectId]
-  management: PropertyManagement
-  name: String
-  owner: [Owner]
-  pms: ObjectId
-  status: String
-  todos: [ObjectId]
+  company: String
+  email: String
 }
 
-input PropertyInsertInput {
-  details: PropertyDetailInsertInput
-  status: String
-  todos: [ObjectId]
-  name: String
-  owner: PropertyOwnerRelationInput
-  address: PropertyAddressInsertInput
-  cleaner: PropertyCleanerRelationInput
-  cleanings: [ObjectId]
-  management: PropertyManagementInsertInput
-  pms: ObjectId
-  _id: ObjectId
-  events: [ObjectId]
-  bookings: [ObjectId]
+input OwnerPropertiesRelationInput {
+  create: [PropertyInsertInput]
+  link: [ObjectId]
 }
 
-input PropertyManagementInsertInput {
-  income: String
-  start: DateTime
-}
-
-input PropertyDetailUpdateInput {
-  HOT_unset: Boolean
-  guests: String
-  bedrooms_unset: Boolean
-  bedrooms: String
-  entry: String
-  entry_unset: Boolean
-  guests_unset: Boolean
-  HOT: String
-  bathrooms: String
-  bathrooms_unset: Boolean
+type UpdateManyPayload {
+  matchedCount: Int!
+  modifiedCount: Int!
 }
 
 type Query {
+  airdna(input: Airdna): DefaultPayload
   cleaner(query: CleanerQueryInput): Cleaner
   cleaners(query: CleanerQueryInput, limit: Int = 100, sortBy: CleanerSortByInput): [Cleaner]!
   owner(query: OwnerQueryInput): Owner
   owners(query: OwnerQueryInput, limit: Int = 100, sortBy: OwnerSortByInput): [Owner]!
-  properties(limit: Int = 100, sortBy: PropertySortByInput, query: PropertyQueryInput): [Property]!
+  properties(query: PropertyQueryInput, limit: Int = 100, sortBy: PropertySortByInput): [Property]!
   property(query: PropertyQueryInput): Property
   vendor(query: VendorQueryInput): Vendor
-  vendors(limit: Int = 100, sortBy: VendorSortByInput, query: VendorQueryInput): [Vendor]!
-}
-
-enum VendorSortByInput {
-  EMAIL_DESC
-  PHONE_ASC
-  PHONE_DESC
-  TYPE_ASC
-  EMAIL_ASC
-  _ID_DESC
-  NAME_ASC
-  NAME_DESC
-  TYPE_DESC
-  _ID_ASC
-}
-
-input PropertyQueryInput {
-  cleanings: [ObjectId]
-  _id_in: [ObjectId]
-  pms_gt: ObjectId
-  bookings: [ObjectId]
-  cleanings_in: [ObjectId]
-  name_gt: String
-  status_in: [String]
-  name_exists: Boolean
-  pms_lte: ObjectId
-  details_exists: Boolean
-  cleaner_nin: [CleanerQueryInput]
-  pms_lt: ObjectId
-  status_nin: [String]
-  _id_lte: ObjectId
-  pms: ObjectId
-  _id_ne: ObjectId
-  name_lte: String
-  _id_exists: Boolean
-  owner_exists: Boolean
-  events_in: [ObjectId]
-  owner_in: [OwnerQueryInput]
-  address: PropertyAddressQueryInput
-  bookings_in: [ObjectId]
-  management_exists: Boolean
-  _id_lt: ObjectId
-  name_ne: String
-  status: String
-  pms_ne: ObjectId
-  _id: ObjectId
-  pms_in: [ObjectId]
-  status_lt: String
-  todos: [ObjectId]
-  name_gte: String
-  details: PropertyDetailQueryInput
-  _id_gte: ObjectId
-  events_exists: Boolean
-  cleaner_exists: Boolean
-  management: PropertyManagementQueryInput
-  cleanings_exists: Boolean
-  bookings_exists: Boolean
-  name_nin: [String]
-  owner_nin: [OwnerQueryInput]
-  OR: [PropertyQueryInput!]
-  name_in: [String]
-  todos_exists: Boolean
-  pms_gte: ObjectId
-  name_lt: String
-  events_nin: [ObjectId]
-  status_ne: String
-  events: [ObjectId]
-  bookings_nin: [ObjectId]
-  todos_in: [ObjectId]
-  _id_gt: ObjectId
-  AND: [PropertyQueryInput!]
-  pms_exists: Boolean
-  status_gte: String
-  address_exists: Boolean
-  status_exists: Boolean
-  owner: [OwnerQueryInput]
-  status_gt: String
-  todos_nin: [ObjectId]
-  cleanings_nin: [ObjectId]
-  cleaner_in: [CleanerQueryInput]
-  status_lte: String
-  pms_nin: [ObjectId]
-  _id_nin: [ObjectId]
-  name: String
-  cleaner: [CleanerQueryInput]
+  vendors(query: VendorQueryInput, limit: Int = 100, sortBy: VendorSortByInput): [Vendor]!
 }
 
 type Cleaner {
@@ -278,131 +100,104 @@ type Cleaner {
   website: String
 }
 
-enum PropertySortByInput {
-  NAME_DESC
-  PMS_ASC
-  PMS_DESC
-  STATUS_ASC
-  STATUS_DESC
+enum OwnerSortByInput {
+  STAGE_DESC
+  EMAIL_ASC
+  FIRSTNAME_ASC
+  LASTNAME_DESC
+  PHONE_DESC
+  STAGE_ASC
+  FIRSTNAME_DESC
+  LASTNAME_ASC
+  PHONE_ASC
+  ROLE_ASC
+  ADDRESS_ASC
+  ADDRESS_DESC
+  EMAIL_DESC
   _ID_ASC
   _ID_DESC
-  NAME_ASC
+  ROLE_DESC
 }
 
-input PropertyUpdateInput {
-  pms_unset: Boolean
-  bookings: [ObjectId]
-  address: PropertyAddressUpdateInput
-  name_unset: Boolean
-  cleanings_unset: Boolean
-  events_unset: Boolean
+input PropertyDetailUpdateInput {
+  entry: String
+  guests_unset: Boolean
+  bedrooms: String
+  bedrooms_unset: Boolean
+  bathrooms_unset: Boolean
+  guests: String
+  HOT: String
+  HOT_unset: Boolean
+  entry_unset: Boolean
+  bathrooms: String
+}
+
+scalar ObjectId
+
+input PropertyDetailQueryInput {
+  entry_gt: String
+  entry_lte: String
+  HOT_gte: String
+  guests_gte: String
+  guests_lte: String
+  OR: [PropertyDetailQueryInput!]
+  bathrooms_gt: String
+  bedrooms_nin: [String]
+  entry_ne: String
+  HOT_in: [String]
+  HOT_ne: String
+  entry_in: [String]
+  entry_nin: [String]
+  entry_exists: Boolean
+  AND: [PropertyDetailQueryInput!]
+  guests_exists: Boolean
+  guests_ne: String
+  HOT_nin: [String]
+  guests: String
+  bedrooms_exists: Boolean
+  guests_lt: String
+  bedrooms_in: [String]
+  bathrooms: String
+  bathrooms_lt: String
+  HOT: String
+  bathrooms_gte: String
+  entry_lt: String
+  bedrooms: String
+  guests_gt: String
+  HOT_exists: Boolean
+  bathrooms_ne: String
+  guests_in: [String]
+  bathrooms_exists: Boolean
+  entry: String
+  bedrooms_gte: String
+  bedrooms_lt: String
+  HOT_gt: String
+  HOT_lte: String
+  bedrooms_lte: String
+  guests_nin: [String]
+  entry_gte: String
+  bedrooms_ne: String
+  HOT_lt: String
+  bathrooms_lte: String
+  bathrooms_in: [String]
+  bathrooms_nin: [String]
+  bedrooms_gt: String
+}
+
+input PropertyInsertInput {
+  todos: [ObjectId]
+  _id: ObjectId
+  cleaner: PropertyCleanerRelationInput
+  address: PropertyAddressInsertInput
+  cleanings: [ObjectId]
   pms: ObjectId
   name: String
-  cleanings: [ObjectId]
-  _id: ObjectId
-  management: PropertyManagementUpdateInput
   status: String
-  todos_unset: Boolean
-  cleaner: PropertyCleanerRelationInput
-  details_unset: Boolean
+  bookings: [ObjectId]
+  details: PropertyDetailInsertInput
   events: [ObjectId]
-  status_unset: Boolean
-  todos: [ObjectId]
-  owner_unset: Boolean
-  _id_unset: Boolean
-  cleaner_unset: Boolean
-  management_unset: Boolean
+  management: PropertyManagementInsertInput
   owner: PropertyOwnerRelationInput
-  address_unset: Boolean
-  details: PropertyDetailUpdateInput
-  bookings_unset: Boolean
-}
-
-input PropertyOwnerRelationInput {
-  create: [OwnerInsertInput]
-  link: [ObjectId]
-}
-
-input VendorQueryInput {
-  email_in: [String]
-  name_gt: String
-  phone_exists: Boolean
-  phone_lte: String
-  type_ne: String
-  type_nin: [String]
-  email_lt: String
-  projects_exists: Boolean
-  AND: [VendorQueryInput!]
-  type_lte: String
-  name_nin: [String]
-  _id_nin: [ObjectId]
-  type_in: [String]
-  phone_gt: String
-  projects: [ObjectId]
-  _id: ObjectId
-  email_gt: String
-  email_lte: String
-  phone_ne: String
-  OR: [VendorQueryInput!]
-  name_exists: Boolean
-  email_gte: String
-  type: String
-  email_ne: String
-  projects_nin: [ObjectId]
-  _id_in: [ObjectId]
-  phone_gte: String
-  phone_lt: String
-  _id_gte: ObjectId
-  name_ne: String
-  projects_in: [ObjectId]
-  _id_exists: Boolean
-  type_gt: String
-  type_exists: Boolean
-  type_gte: String
-  _id_ne: ObjectId
-  _id_gt: ObjectId
-  _id_lte: ObjectId
-  phone_nin: [String]
-  email: String
-  name_lt: String
-  name_gte: String
-  email_exists: Boolean
-  name_in: [String]
-  phone: String
-  phone_in: [String]
-  _id_lt: ObjectId
-  type_lt: String
-  email_nin: [String]
-  name_lte: String
-  name: String
-}
-
-input PropertyAddressInsertInput {
-  street: String
-  zip: String
-  city: String
-  state: String
-}
-
-input VendorInsertInput {
-  email: String
-  name: String
-  phone: String
-  projects: [ObjectId]
-  type: String
-  _id: ObjectId
-}
-
-type Owner {
-  _id: ObjectId
-  address: String
-  email: String
-  firstName: String
-  lastName: String
-  phone: String
-  properties: [Property]
-  role: String
-  stage: String
 }
 
 type PropertyAddress {
@@ -410,6 +205,130 @@ type PropertyAddress {
   state: String
   street: String
   zip: String
+}
+
+input PropertyManagementUpdateInput {
+  income_unset: Boolean
+  start: DateTime
+  start_unset: Boolean
+  income: String
+}
+
+type DefaultPayload {
+  status: String!
+}
+
+input PropertyOwnerRelationInput {
+  create: [OwnerInsertInput]
+  link: [ObjectId]
+}
+
+input OwnerQueryInput {
+  properties_exists: Boolean
+  stage_gt: String
+  email_lte: String
+  phone_gt: String
+  lastName_gt: String
+  role_lte: String
+  role_gte: String
+  stage_in: [String]
+  lastName_ne: String
+  firstName_lte: String
+  stage_gte: String
+  lastName_nin: [String]
+  phone_in: [String]
+  address_lt: String
+  email_in: [String]
+  role_in: [String]
+  stage_exists: Boolean
+  _id_lt: ObjectId
+  firstName_nin: [String]
+  _id_ne: ObjectId
+  _id_lte: ObjectId
+  firstName_in: [String]
+  role_ne: String
+  lastName_exists: Boolean
+  firstName_ne: String
+  stage_nin: [String]
+  _id_gt: ObjectId
+  address: String
+  firstName: String
+  lastName_lte: String
+  stage_lte: String
+  _id_gte: ObjectId
+  email_lt: String
+  firstName_exists: Boolean
+  _id_nin: [ObjectId]
+  properties_in: [PropertyQueryInput]
+  address_lte: String
+  email_nin: [String]
+  address_in: [String]
+  address_gt: String
+  role_gt: String
+  role_nin: [String]
+  address_exists: Boolean
+  phone_exists: Boolean
+  properties: [PropertyQueryInput]
+  email_gte: String
+  phone_gte: String
+  phone: String
+  lastName_in: [String]
+  lastName: String
+  lastName_gte: String
+  _id_exists: Boolean
+  address_nin: [String]
+  phone_lte: String
+  role: String
+  email_ne: String
+  firstName_lt: String
+  _id_in: [ObjectId]
+  firstName_gt: String
+  stage_lt: String
+  address_ne: String
+  phone_ne: String
+  firstName_gte: String
+  email_gt: String
+  OR: [OwnerQueryInput!]
+  role_lt: String
+  _id: ObjectId
+  phone_lt: String
+  properties_nin: [PropertyQueryInput]
+  stage: String
+  AND: [OwnerQueryInput!]
+  lastName_lt: String
+  address_gte: String
+  email: String
+  stage_ne: String
+  phone_nin: [String]
+  email_exists: Boolean
+  role_exists: Boolean
+}
+
+input PropertyManagementQueryInput {
+  start_nin: [DateTime]
+  OR: [PropertyManagementQueryInput!]
+  income: String
+  income_gt: String
+  start_in: [DateTime]
+  start_lte: DateTime
+  income_nin: [String]
+  start_exists: Boolean
+  income_gte: String
+  start: DateTime
+  start_gte: DateTime
+  income_exists: Boolean
+  income_ne: String
+  start_ne: DateTime
+  start_gt: DateTime
+  start_lt: DateTime
+  income_in: [String]
+  income_lt: String
+  income_lte: String
+  AND: [PropertyManagementQueryInput!]
+}
+
+input Airdna {
+  path: String
 }
 
 type Mutation {
@@ -432,7 +351,7 @@ type Mutation {
   replaceOneCleaner(query: CleanerQueryInput, data: CleanerInsertInput!): Cleaner
   replaceOneOwner(query: OwnerQueryInput, data: OwnerInsertInput!): Owner
   replaceOneProperty(query: PropertyQueryInput, data: PropertyInsertInput!): Property
-  replaceOneVendor(query: VendorQueryInput, data: VendorInsertInput!): Vendor
+  replaceOneVendor(data: VendorInsertInput!, query: VendorQueryInput): Vendor
   updateManyCleaners(query: CleanerQueryInput, set: CleanerUpdateInput!): UpdateManyPayload
   updateManyOwners(set: OwnerUpdateInput!, query: OwnerQueryInput): UpdateManyPayload
   updateManyProperties(query: PropertyQueryInput, set: PropertyUpdateInput!): UpdateManyPayload
@@ -447,9 +366,152 @@ type Mutation {
   upsertOneVendor(query: VendorQueryInput, data: VendorInsertInput!): Vendor
 }
 
-input OwnerPropertiesRelationInput {
-  create: [PropertyInsertInput]
-  link: [ObjectId]
+input OwnerUpdateInput {
+  _id_unset: Boolean
+  lastName_unset: Boolean
+  _id: ObjectId
+  address: String
+  firstName: String
+  role: String
+  role_unset: Boolean
+  lastName: String
+  properties_unset: Boolean
+  email: String
+  address_unset: Boolean
+  properties: OwnerPropertiesRelationInput
+  phone: String
+  firstName_unset: Boolean
+  stage: String
+  email_unset: Boolean
+  phone_unset: Boolean
+  stage_unset: Boolean
+}
+
+input PropertyQueryInput {
+  name_ne: String
+  status: String
+  todos_exists: Boolean
+  cleanings_nin: [ObjectId]
+  _id: ObjectId
+  name_exists: Boolean
+  name_in: [String]
+  address_exists: Boolean
+  _id_gt: ObjectId
+  cleanings_in: [ObjectId]
+  events_exists: Boolean
+  _id_exists: Boolean
+  events: [ObjectId]
+  status_exists: Boolean
+  address: PropertyAddressQueryInput
+  cleanings: [ObjectId]
+  bookings_in: [ObjectId]
+  status_in: [String]
+  bookings_exists: Boolean
+  name_lte: String
+  owner_in: [OwnerQueryInput]
+  owner_exists: Boolean
+  name_gt: String
+  details_exists: Boolean
+  cleaner_in: [CleanerQueryInput]
+  pms_gte: ObjectId
+  status_lt: String
+  name_gte: String
+  AND: [PropertyQueryInput!]
+  status_gt: String
+  status_gte: String
+  _id_ne: ObjectId
+  events_nin: [ObjectId]
+  management_exists: Boolean
+  _id_in: [ObjectId]
+  pms_gt: ObjectId
+  management: PropertyManagementQueryInput
+  todos_in: [ObjectId]
+  bookings: [ObjectId]
+  _id_nin: [ObjectId]
+  status_lte: String
+  pms_exists: Boolean
+  status_ne: String
+  owner: [OwnerQueryInput]
+  cleanings_exists: Boolean
+  _id_lt: ObjectId
+  pms_lte: ObjectId
+  status_nin: [String]
+  events_in: [ObjectId]
+  todos_nin: [ObjectId]
+  name_nin: [String]
+  cleaner_nin: [CleanerQueryInput]
+  owner_nin: [OwnerQueryInput]
+  pms: ObjectId
+  pms_ne: ObjectId
+  name: String
+  pms_in: [ObjectId]
+  details: PropertyDetailQueryInput
+  pms_lt: ObjectId
+  bookings_nin: [ObjectId]
+  todos: [ObjectId]
+  _id_lte: ObjectId
+  pms_nin: [ObjectId]
+  cleaner: [CleanerQueryInput]
+  cleaner_exists: Boolean
+  name_lt: String
+  _id_gte: ObjectId
+  OR: [PropertyQueryInput!]
+}
+
+type Owner {
+  _id: ObjectId
+  address: String
+  email: String
+  firstName: String
+  lastName: String
+  phone: String
+  properties: [Property]
+  role: String
+  stage: String
+}
+
+type Property {
+  _id: ObjectId
+  address: PropertyAddress
+  bookings: [ObjectId]
+  cleaner: [Cleaner]
+  cleanings: [ObjectId]
+  details: PropertyDetail
+  events: [ObjectId]
+  management: PropertyManagement
+  name: String
+  owner: [Owner]
+  pms: ObjectId
+  status: String
+  todos: [ObjectId]
+}
+
+enum PropertySortByInput {
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  PMS_ASC
+  PMS_DESC
+  STATUS_ASC
+  STATUS_DESC
+  _ID_ASC
+}
+
+input PropertyManagementInsertInput {
+  income: String
+  start: DateTime
+}
+
+input OwnerInsertInput {
+  email: String
+  firstName: String
+  stage: String
+  address: String
+  lastName: String
+  _id: ObjectId
+  phone: String
+  properties: OwnerPropertiesRelationInput
+  role: String
 }
 
 input PropertyCleanerRelationInput {
@@ -457,178 +519,73 @@ input PropertyCleanerRelationInput {
   link: [ObjectId]
 }
 
-scalar ObjectId
-
-input PropertyAddressQueryInput {
-  city_lte: String
-  city_lt: String
-  street_lte: String
-  street_gte: String
-  state_gte: String
-  city_nin: [String]
-  state_gt: String
-  street_nin: [String]
-  street_ne: String
-  city_gt: String
-  zip_gte: String
-  OR: [PropertyAddressQueryInput!]
-  state: String
-  zip: String
-  zip_in: [String]
-  city_ne: String
-  city: String
-  zip_nin: [String]
-  AND: [PropertyAddressQueryInput!]
-  street_lt: String
-  state_lte: String
-  zip_gt: String
-  state_in: [String]
-  street_gt: String
-  zip_lt: String
-  state_exists: Boolean
-  zip_lte: String
-  zip_ne: String
-  street_in: [String]
-  street: String
-  street_exists: Boolean
-  state_nin: [String]
-  city_gte: String
-  city_in: [String]
-  state_ne: String
-  zip_exists: Boolean
-  state_lt: String
-  city_exists: Boolean
-}
-
-input PropertyManagementQueryInput {
-  income: String
-  income_ne: String
-  start_lt: DateTime
-  income_exists: Boolean
-  OR: [PropertyManagementQueryInput!]
-  AND: [PropertyManagementQueryInput!]
-  income_lt: String
-  income_gte: String
-  income_nin: [String]
-  start_lte: DateTime
-  income_in: [String]
-  income_gt: String
-  start_gte: DateTime
-  income_lte: String
-  start_in: [DateTime]
-  start_exists: Boolean
-  start: DateTime
-  start_ne: DateTime
-  start_nin: [DateTime]
-  start_gt: DateTime
-}
-
-type PropertyDetail {
-  HOT: String
-  bathrooms: String
-  bedrooms: String
-  entry: String
-  guests: String
-}
-
-input PropertyDetailInsertInput {
-  guests: String
-  HOT: String
-  bathrooms: String
-  bedrooms: String
-  entry: String
-}
-
 input VendorUpdateInput {
-  email_unset: Boolean
-  phone: String
-  phone_unset: Boolean
-  projects: [ObjectId]
-  _id: ObjectId
-  _id_unset: Boolean
-  type: String
-  projects_unset: Boolean
-  email: String
   name: String
+  projects_unset: Boolean
+  _id: ObjectId
+  email_unset: Boolean
   name_unset: Boolean
   type_unset: Boolean
-}
-
-input PropertyManagementUpdateInput {
-  income_unset: Boolean
-  start: DateTime
-  start_unset: Boolean
-  income: String
-}
-
-type InsertManyPayload {
-  insertedIds: [ObjectId]!
-}
-
-input CleanerUpdateInput {
-  _id_unset: Boolean
-  company: String
-  properties: [ObjectId]
-  website_unset: Boolean
-  company_unset: Boolean
-  email_unset: Boolean
-  website: String
-  phone: String
-  properties_unset: Boolean
-  _id: ObjectId
   email: String
+  projects: [ObjectId]
+  type: String
+  _id_unset: Boolean
+  phone: String
   phone_unset: Boolean
 }
 
-scalar DateTime
-
-enum OwnerSortByInput {
-  ADDRESS_ASC
-  EMAIL_DESC
-  FIRSTNAME_DESC
-  ROLE_ASC
-  STAGE_ASC
-  STAGE_DESC
-  _ID_ASC
-  _ID_DESC
-  FIRSTNAME_ASC
-  PHONE_ASC
-  PHONE_DESC
-  LASTNAME_DESC
-  ROLE_DESC
-  ADDRESS_DESC
-  EMAIL_ASC
-  LASTNAME_ASC
-}
-
-input CleanerInsertInput {
-  website: String
+input VendorQueryInput {
+  _id_in: [ObjectId]
+  AND: [VendorQueryInput!]
+  phone_gt: String
+  phone_in: [String]
+  email_lte: String
+  name_lt: String
+  name_lte: String
+  phone_nin: [String]
+  phone_exists: Boolean
+  phone_ne: String
+  phone_gte: String
+  _id_exists: Boolean
+  type_lt: String
+  _id_lte: ObjectId
+  _id_lt: ObjectId
+  projects: [ObjectId]
+  type_exists: Boolean
+  _id_nin: [ObjectId]
+  type_gt: String
+  _id_gt: ObjectId
+  projects_in: [ObjectId]
   _id: ObjectId
-  company: String
+  email_nin: [String]
+  name_ne: String
+  _id_ne: ObjectId
+  projects_exists: Boolean
+  email_ne: String
+  name: String
   email: String
+  type_gte: String
+  name_in: [String]
+  email_in: [String]
+  name_gte: String
+  name_exists: Boolean
+  OR: [VendorQueryInput!]
   phone: String
-  properties: [ObjectId]
-}
-
-input OwnerUpdateInput {
-  email: String
-  _id: ObjectId
-  properties_unset: Boolean
-  properties: OwnerPropertiesRelationInput
-  firstName_unset: Boolean
-  lastName_unset: Boolean
-  role: String
-  address: String
-  lastName: String
-  _id_unset: Boolean
-  address_unset: Boolean
-  email_unset: Boolean
-  stage_unset: Boolean
-  stage: String
-  phone: String
-  firstName: String
-  phone_unset: Boolean
-  role_unset: Boolean
+  email_exists: Boolean
+  name_nin: [String]
+  projects_nin: [ObjectId]
+  email_lt: String
+  type: String
+  phone_lt: String
+  type_nin: [String]
+  type_ne: String
+  type_lte: String
+  type_in: [String]
+  _id_gte: ObjectId
+  email_gt: String
+  email_gte: String
+  name_gt: String
+  phone_lte: String
 }
 
 type PropertyManagement {
@@ -636,115 +593,167 @@ type PropertyManagement {
   start: DateTime
 }
 
+input PropertyUpdateInput {
+  management_unset: Boolean
+  owner: PropertyOwnerRelationInput
+  cleanings_unset: Boolean
+  events_unset: Boolean
+  address_unset: Boolean
+  address: PropertyAddressUpdateInput
+  details: PropertyDetailUpdateInput
+  management: PropertyManagementUpdateInput
+  cleanings: [ObjectId]
+  events: [ObjectId]
+  todos_unset: Boolean
+  _id: ObjectId
+  bookings_unset: Boolean
+  status: String
+  cleaner_unset: Boolean
+  bookings: [ObjectId]
+  details_unset: Boolean
+  pms: ObjectId
+  pms_unset: Boolean
+  cleaner: PropertyCleanerRelationInput
+  status_unset: Boolean
+  name: String
+  todos: [ObjectId]
+  name_unset: Boolean
+  _id_unset: Boolean
+  owner_unset: Boolean
+}
+
 input CleanerQueryInput {
-  _id_lte: ObjectId
-  company_exists: Boolean
+  _id_nin: [ObjectId]
+  email_in: [String]
+  company_in: [String]
+  OR: [CleanerQueryInput!]
+  website_nin: [String]
+  website_exists: Boolean
+  company_ne: String
+  _id_gt: ObjectId
   _id_gte: ObjectId
-  company_lt: String
-  website_gte: String
-  _id_lt: ObjectId
-  properties: [ObjectId]
+  email_gte: String
+  company: String
+  properties_nin: [ObjectId]
+  email_gt: String
   email_lt: String
+  phone_gte: String
+  website: String
+  email: String
   website_ne: String
   phone_nin: [String]
-  phone: String
-  company_lte: String
-  website_lt: String
-  email_gt: String
-  company_in: [String]
   company_nin: [String]
-  phone_in: [String]
-  email_exists: Boolean
-  phone_gt: String
-  _id_gt: ObjectId
-  phone_ne: String
-  OR: [CleanerQueryInput!]
-  _id_nin: [ObjectId]
-  email_gte: String
-  email_lte: String
-  properties_in: [ObjectId]
-  email_ne: String
-  company: String
-  _id_ne: ObjectId
-  phone_lt: String
-  phone_lte: String
-  _id_exists: Boolean
-  website_exists: Boolean
-  website_nin: [String]
-  website_lte: String
   company_gt: String
-  email: String
-  phone_exists: Boolean
-  _id_in: [ObjectId]
+  phone: String
   email_nin: [String]
+  website_gte: String
+  phone_gt: String
   website_gt: String
-  AND: [CleanerQueryInput!]
+  email_lte: String
+  phone_lt: String
+  phone_exists: Boolean
+  _id_exists: Boolean
   company_gte: String
-  website: String
-  _id: ObjectId
-  properties_nin: [ObjectId]
-  phone_gte: String
-  email_in: [String]
+  phone_lte: String
+  website_lt: String
+  _id_lte: ObjectId
+  company_lte: String
   website_in: [String]
+  properties_in: [ObjectId]
+  AND: [CleanerQueryInput!]
+  _id_lt: ObjectId
+  _id_in: [ObjectId]
+  email_ne: String
+  _id: ObjectId
+  company_exists: Boolean
+  company_lt: String
+  phone_in: [String]
+  _id_ne: ObjectId
   properties_exists: Boolean
-  company_ne: String
+  website_lte: String
+  phone_ne: String
+  properties: [ObjectId]
+  email_exists: Boolean
+}
+
+input PropertyDetailInsertInput {
+  bathrooms: String
+  bedrooms: String
+  entry: String
+  guests: String
+  HOT: String
+}
+
+input PropertyAddressInsertInput {
+  zip: String
+  city: String
+  state: String
+  street: String
+}
+
+input PropertyAddressUpdateInput {
+  zip_unset: Boolean
+  city: String
+  city_unset: Boolean
+  state: String
+  state_unset: Boolean
+  street: String
+  street_unset: Boolean
+  zip: String
+}
+
+type InsertManyPayload {
+  insertedIds: [ObjectId]!
+}
+
+scalar DateTime
+
+input CleanerUpdateInput {
+  email: String
+  properties_unset: Boolean
+  properties: [ObjectId]
+  _id_unset: Boolean
+  phone: String
+  _id: ObjectId
+  website_unset: Boolean
+  company: String
+  phone_unset: Boolean
+  company_unset: Boolean
+  email_unset: Boolean
+  website: String
 }
 
 type DeleteManyPayload {
   deletedCount: Int!
 }
 
-type UpdateManyPayload {
-  matchedCount: Int!
-  modifiedCount: Int!
+enum VendorSortByInput {
+  _ID_ASC
+  EMAIL_DESC
+  PHONE_DESC
+  TYPE_ASC
+  TYPE_DESC
+  _ID_DESC
+  EMAIL_ASC
+  NAME_ASC
+  NAME_DESC
+  PHONE_ASC
 }
 
-input PropertyDetailQueryInput {
-  bathrooms_in: [String]
-  bathrooms_ne: String
-  guests_in: [String]
-  bedrooms_ne: String
-  entry_lt: String
-  AND: [PropertyDetailQueryInput!]
-  bathrooms_lt: String
-  entry_gt: String
-  bathrooms_gt: String
-  entry_in: [String]
-  bathrooms: String
-  bathrooms_gte: String
-  HOT_in: [String]
-  entry_ne: String
-  guests_lt: String
-  guests_nin: [String]
-  entry_nin: [String]
-  HOT_lte: String
-  guests_lte: String
-  entry_lte: String
-  bedrooms_in: [String]
-  bedrooms_nin: [String]
-  guests_exists: Boolean
-  HOT_nin: [String]
-  bedrooms_gte: String
-  HOT_gte: String
-  guests: String
-  HOT_ne: String
-  entry_exists: Boolean
-  entry: String
-  HOT_gt: String
-  bedrooms_exists: Boolean
-  bathrooms_lte: String
-  bedrooms_lt: String
-  guests_gt: String
-  HOT: String
-  entry_gte: String
-  bedrooms_lte: String
-  bedrooms_gt: String
-  HOT_lt: String
-  bathrooms_exists: Boolean
-  guests_ne: String
-  guests_gte: String
-  bathrooms_nin: [String]
-  OR: [PropertyDetailQueryInput!]
-  bedrooms: String
-  HOT_exists: Boolean
+type Vendor {
+  _id: ObjectId
+  email: String
+  name: String
+  phone: String
+  projects: [ObjectId]
+  type: String
+}
+
+input VendorInsertInput {
+  name: String
+  phone: String
+  projects: [ObjectId]
+  type: String
+  _id: ObjectId
+  email: String
 }

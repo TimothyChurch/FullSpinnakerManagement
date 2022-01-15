@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import * as Realm from 'realm-web'
-import { cacheExchange, createClient, dedupExchange, fetchExchange, provideClient } from '@urql/vue'
+import { createClient, dedupExchange, fetchExchange, provideClient } from '@urql/vue'
+import { cacheExchange } from '@urql/exchange-graphcache'
 import { authExchange } from '@urql/exchange-auth'
+import schema from '~/graphql/urql.schema.json'
 
 useHead({
   title: 'Full Spinnaker',
@@ -15,7 +17,12 @@ const client = createClient({
     'https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/fullspinnaker-ydwol/graphql', // TODO move to config
   exchanges: [
     dedupExchange,
-    cacheExchange,
+    cacheExchange({
+      schema,
+      keys: {
+        PropertyAddress: () => null,
+      },
+    }),
     authExchange({
       addAuthToOperation: ({
         authState,
